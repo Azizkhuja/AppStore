@@ -1,12 +1,16 @@
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  InputBase,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+
+import brandLogo from "../../assets/moon.svg";
 
 function Navbar() {
   return (
@@ -22,6 +26,7 @@ function Navbar() {
           >
             <MenuIcon />
           </IconButton>
+          <img src={brandLogo} alt="logo" style={{ width: 35, height: 35 }} />
           <Typography
             variant="h6"
             noWrap
