@@ -12,27 +12,27 @@ import Guardian from "../../assets/guardian.png";
 const Partners = () => {
   const partnersLogo = [
     {
-      id: 3,
+      id: 1,
       img: Financialtimes,
     },
     {
-      id: 4,
+      id: 2,
       img: Forbes,
     },
     {
-      id: 5,
+      id: 3,
       img: Guardian,
     },
     {
-      id: 6,
+      id: 4,
       img: Reuters,
     },
     {
-      id: 7,
+      id: 5,
       img: Skynews,
     },
     {
-      id: 8,
+      id: 6,
       img: Bbcnews,
     },
   ];
