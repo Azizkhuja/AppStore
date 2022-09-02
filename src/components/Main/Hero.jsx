@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { Button, Typography } from "@mui/material";
-import Box from "@mui/material/Box";
+import { Button, Typography, Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import logo from "../../assets/finder_credit_score.png";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Hero = () => {
+  const matches = useMediaQuery("(min-width:900px)");
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
@@ -17,7 +19,7 @@ const Hero = () => {
             alignItems: "center",
           }}
         >
-          <StyledTypography variant="h2" gutterBottom>
+          <StyledTypography variant={matches ? "h2" : "h4"} gutterBottom>
             Get single application statistics
           </StyledTypography>
           <OrderList>
