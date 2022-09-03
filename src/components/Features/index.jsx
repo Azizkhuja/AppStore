@@ -1,3 +1,4 @@
+import FeaturesCard from "./FeaturesCard";
 import styled from "styled-components";
 import { Typography } from "@mui/material";
 
@@ -8,6 +9,7 @@ function Features() {
       <StyledSubHeadline variant="h5">
         Find better deals across 100+ categories
       </StyledSubHeadline>
+      <FeaturesCard />
     </div>
   );
 }
