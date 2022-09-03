@@ -52,10 +52,10 @@ const Partners = () => {
             sm={3}
             md={2}
             sx={{ display: "flex", justifyContent: "center" }}
+            key={partner.id}
           >
             <ImageContainer>
               <img
-                key={partner.id}
                 src={partner.img}
                 alt={partner.img}
                 style={{ width: "100%", height: "100%" }}
