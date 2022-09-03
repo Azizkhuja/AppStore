@@ -5,21 +5,26 @@ import logo from "../../assets/finder_credit_score.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Hero = () => {
-  const matches = useMediaQuery("(min-width:900px)");
+  const medium = useMediaQuery("(min-width:900px)");
+  const small = useMediaQuery("(min-width:600px)");
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
         <Grid
-          xs={6}
+          sm={6}
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: small ? 0 : 4,
+            marginLeft: small ? 0 : "auto",
+            marginRight: small ? 0 : "auto",
+            padding: 3,
           }}
         >
-          <StyledTypography variant={matches ? "h2" : "h4"} gutterBottom>
+          <StyledTypography variant={medium ? "h2" : "h4"} gutterBottom>
             Get single application statistics
           </StyledTypography>
           <OrderList>
@@ -29,7 +34,7 @@ const Hero = () => {
           </OrderList>
           <HeroButton variant="contained">Get free credit report</HeroButton>
         </Grid>
-        <Grid xs={6}>
+        <Grid sm={6}>
           <HeroImage src={logo} alt="main-image" />
         </Grid>
       </Grid>
