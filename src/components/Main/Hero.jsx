@@ -24,7 +24,7 @@ const Hero = () => {
             padding: 3,
           }}
         >
-          <StyledTypography variant={medium ? "h2" : "h4"} gutterBottom>
+          <StyledTypography variant={medium ? "h2" : "h3"} gutterBottom>
             Get single application statistics
           </StyledTypography>
           <OrderList>
@@ -32,7 +32,18 @@ const Hero = () => {
             <li>Start with a FREE credit score & report</li>
             <li>Find a better deal in minutes</li>
           </OrderList>
-          <HeroButton variant="contained">Get free credit report</HeroButton>
+          <HeroButton
+            variant="contained"
+            sx={{
+              backgroundColor: "#000",
+              ":hover": {
+                backgroundColor: "#fff",
+                color: "#000",
+              },
+            }}
+          >
+            Get free credit report
+          </HeroButton>
         </Grid>
         <Grid sm={6}>
           <HeroImage src={logo} alt="main-image" />

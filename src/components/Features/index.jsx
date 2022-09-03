@@ -5,8 +5,8 @@ import { Typography } from "@mui/material";
 function Features() {
   return (
     <div>
-      <StyledHeadline variant="h3">Start saving money</StyledHeadline>
-      <StyledSubHeadline variant="h5">
+      <StyledHeadline variant="h2">Start saving money</StyledHeadline>
+      <StyledSubHeadline variant="h3">
         Find better deals across 100+ categories
       </StyledSubHeadline>
       <FeaturesCard />
@@ -21,6 +21,7 @@ const StyledHeadline = styled(Typography)`
     font-size: 32px;
     line-height: 38.4px;
     margin-bottom: 8px;
+    text-align: center;
   }
 `;
 const StyledSubHeadline = styled(Typography)`
@@ -31,6 +32,7 @@ const StyledSubHeadline = styled(Typography)`
     line-height: 30px;
     color: #6c7881;
     margin-bottom: 16px;
+    text-align: center;
   }
 `;
 export default Features;

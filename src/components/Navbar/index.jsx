@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-
+import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 import brandLogo from "../../assets/moon.svg";
 
 function Navbar() {
@@ -29,7 +29,8 @@ function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <img src={brandLogo} alt="logo" style={{ width: 35, height: 35 }} />
+          <ArchitectureTwoToneIcon sx={{ color: "#000", fontSize: 40 }} />
+          {/* <img src={brandLogo} alt="logo" style={{ width: 35, height: 35 }} /> */}
           <Typography
             variant="h6"
             noWrap
