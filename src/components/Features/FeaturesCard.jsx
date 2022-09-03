@@ -15,32 +15,32 @@ const FeaturesCard = () => {
     {
       id: 1,
       img: <CreditCardTwoToneIcon />,
-      title: "Credit Card1",
+      title: "Top Paid",
     },
     {
       id: 2,
       img: <HourglassTopTwoToneIcon />,
-      title: "Credit Card2",
+      title: "Top Free",
     },
     {
       id: 3,
       img: <HomeWorkTwoToneIcon />,
-      title: "Credit Card3",
+      title: "Tranding",
     },
     {
       id: 4,
       img: <DirectionsCarTwoToneIcon />,
-      title: "Credit Card4",
+      title: "Top Apps",
     },
     {
       id: 5,
       img: <TrendingUpTwoToneIcon />,
-      title: "Credit Card5",
+      title: "Top chart",
     },
     {
       id: 6,
       img: <ShoppingBagTwoToneIcon />,
-      title: "Credit Card6",
+      title: "Platinum",
     },
   ];
   return (
