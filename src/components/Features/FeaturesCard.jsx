@@ -11,126 +11,71 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
 const FeaturesCard = () => {
+  const cardInfo = [
+    {
+      id: 1,
+      img: <CreditCardTwoToneIcon />,
+      title: "Credit Card1",
+    },
+    {
+      id: 2,
+      img: <HourglassTopTwoToneIcon />,
+      title: "Credit Card2",
+    },
+    {
+      id: 3,
+      img: <HomeWorkTwoToneIcon />,
+      title: "Credit Card3",
+    },
+    {
+      id: 4,
+      img: <DirectionsCarTwoToneIcon />,
+      title: "Credit Card4",
+    },
+    {
+      id: 5,
+      img: <TrendingUpTwoToneIcon />,
+      title: "Credit Card5",
+    },
+    {
+      id: 6,
+      img: <ShoppingBagTwoToneIcon />,
+      title: "Credit Card6",
+    },
+  ];
   return (
-    <Grid container>
-      <Grid
-        item
-        sm={6}
-        lg={3}
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
-        <Card
-          sx={{
-            display: "inline-block",
-            border: "1px solid #e3e5e8",
-            paddingLeft: 2,
-            paddingRight: 2,
-          }}
+    <Grid container spacing={1}>
+      {cardInfo.map((card) => (
+        <Grid
+          item
+          xs={6}
+          sm={4}
+          lg={2}
+          sx={{ display: "flex", justifyContent: "center" }}
         >
-          <CardContent
+          <Card
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              display: "inline-block",
+              border: "1px solid #e3e5e8",
+              paddingLeft: 2,
+              paddingRight: 2,
             }}
           >
-            <CreditCardTwoToneIcon fontSize="large" sx={{ color: "#0271e1" }} />
-            <Typography variant="h6" mt={1}>
-              Credit Card
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid
-        item
-        sm={6}
-        lg={3}
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
-        <Card
-          sx={{
-            display: "inline-block",
-            border: "1px solid #e3e5e8",
-            paddingLeft: 2,
-            paddingRight: 2,
-          }}
-        >
-          <CardContent
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <HourglassTopTwoToneIcon
-              fontSize="large"
-              sx={{ color: "#0271e1" }}
-            />
-            <Typography variant="h6" mt={1}>
-              Hourly rate
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid
-        item
-        sm={6}
-        lg={3}
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
-        <Card
-          sx={{
-            display: "inline-block",
-            border: "1px solid #e3e5e8",
-            paddingLeft: 2,
-            paddingRight: 2,
-          }}
-        >
-          <CardContent
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <HomeWorkTwoToneIcon fontSize="large" sx={{ color: "#0271e1" }} />
-            <Typography variant="h6" mt={1}>
-              App Store
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid
-        item
-        sm={6}
-        lg={3}
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
-        <Card
-          sx={{
-            display: "inline-block",
-            border: "1px solid #e3e5e8",
-            paddingLeft: 2,
-            paddingRight: 2,
-          }}
-        >
-          <CardContent
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <DirectionsCarTwoToneIcon
-              fontSize="large"
-              sx={{ color: "#0271e1" }}
-            />
-            <Typography variant="h6" mt={1}>
-              Grid store
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+            <CardContent
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              {card.img}
+              <Typography variant="h6" mt={1}>
+                {card.title}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      ))}
     </Grid>
   );
 };
