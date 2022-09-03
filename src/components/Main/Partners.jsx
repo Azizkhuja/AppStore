@@ -46,7 +46,13 @@ const Partners = () => {
         }}
       >
         {partnersLogo.map((partner) => (
-          <Grid item xs={6} sm={3} md={2}>
+          <Grid
+            item
+            xs={6}
+            sm={3}
+            md={2}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
             <ImageContainer>
               <img
                 key={partner.id}
