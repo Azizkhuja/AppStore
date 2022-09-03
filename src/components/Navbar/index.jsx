@@ -15,14 +15,17 @@ import brandLogo from "../../assets/moon.svg";
 function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ background: "#2E3B55" }}>
+      <AppBar
+        position="static"
+        style={{ background: "#fff", boxShadow: "none" }}
+      >
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
             color="primary"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, color: "#000" }}
           >
             <MenuIcon />
           </IconButton>
@@ -31,17 +34,22 @@ function Navbar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              color: "#000",
+              display: { xs: "none", sm: "block" },
+            }}
           >
             App Store
           </Typography>
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon style={{ color: "#000" }} />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              style={{ color: "#000" }}
             />
           </Search>
         </Toolbar>
