@@ -10,7 +10,9 @@ import {
   Paper,
   TableCell,
   tableCellClasses,
+  Typography,
 } from "@mui/material";
+import StarTwoToneIcon from "@mui/icons-material/StarTwoTone";
 
 const dataAll = [
   {
@@ -134,9 +136,9 @@ const PopularTable = () => {
       <Table aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell align="center">Rank</StyledTableCell>
-            <StyledTableCell>Logo</StyledTableCell>
-            <StyledTableCell>App name</StyledTableCell>
+            <StyledTableCell>Rank</StyledTableCell>
+            <StyledTableCell align="center">Logo</StyledTableCell>
+            <StyledTableCell>App Name</StyledTableCell>
             <StyledTableCell>Category</StyledTableCell>
             <StyledTableCell>Downloads</StyledTableCell>
           </TableRow>
@@ -144,9 +146,14 @@ const PopularTable = () => {
         <TableBody>
           {dataAll.map((row) => (
             <StyledTableRow key={row.app_id}>
-              <StyledTableCell align="center">{row.rating}</StyledTableCell>
+              <StyledTableCell align="center">
+                <Typography variant="body1">
+                  <StarTwoToneIcon />
+                </Typography>
+                <Typography variant="subtitle1">{row.rating}</Typography>
+              </StyledTableCell>
               <StyledTableCell>
-                <img src={row.app_icon} style={{ width: 20, height: 20 }} />
+                <img src={row.app_icon} style={{ width: 50, height: 50 }} />
               </StyledTableCell>
               <StyledTableCell>{row.app_name}</StyledTableCell>
               <StyledTableCell>{row.app_category}</StyledTableCell>
