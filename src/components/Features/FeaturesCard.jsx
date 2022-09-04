@@ -52,6 +52,7 @@ const FeaturesCard = () => {
           sm={4}
           lg={2}
           sx={{ display: "flex", justifyContent: "center" }}
+          key={card.id}
         >
           <Card
             sx={{
