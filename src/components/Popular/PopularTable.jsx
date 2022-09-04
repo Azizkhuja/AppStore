@@ -109,15 +109,6 @@ const dataAll = [
   },
 ];
 
-function createData(name, calories, fat, carbs) {
-  return { name, calories, fat, carbs };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 1, 24),
-  createData("Ice cream sandwich", 237, 9.0, 37),
-];
-
 const PopularTable = () => {
   useEffect(() => {
     // const options = {
@@ -143,21 +134,23 @@ const PopularTable = () => {
       <Table aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Rank</StyledTableCell>
-            <StyledTableCell align="right">App</StyledTableCell>
-            <StyledTableCell align="right">About</StyledTableCell>
-            <StyledTableCell align="right">Downloads</StyledTableCell>
+            <StyledTableCell align="center">Rank</StyledTableCell>
+            <StyledTableCell>Logo</StyledTableCell>
+            <StyledTableCell>App name</StyledTableCell>
+            <StyledTableCell>Category</StyledTableCell>
+            <StyledTableCell>Downloads</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
+          {dataAll.map((row) => (
+            <StyledTableRow key={row.app_id}>
+              <StyledTableCell align="center">{row.rating}</StyledTableCell>
+              <StyledTableCell>
+                <img src={row.app_icon} style={{ width: 20, height: 20 }} />
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+              <StyledTableCell>{row.app_name}</StyledTableCell>
+              <StyledTableCell>{row.app_category}</StyledTableCell>
+              <StyledTableCell>{row.num_downloads}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
