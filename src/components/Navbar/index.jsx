@@ -30,7 +30,6 @@ function Navbar() {
             <MenuIcon />
           </IconButton>
           <ArchitectureTwoToneIcon sx={{ color: "#000", fontSize: 40 }} />
-          {/* <img src={brandLogo} alt="logo" style={{ width: 35, height: 35 }} /> */}
           <Typography
             variant="h6"
             noWrap
