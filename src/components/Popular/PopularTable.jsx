@@ -12,6 +12,7 @@ import {
   tableCellClasses,
   Typography,
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import StarTwoToneIcon from "@mui/icons-material/StarTwoTone";
 
 const dataAll = [
@@ -112,6 +113,7 @@ const dataAll = [
 ];
 
 const PopularTable = () => {
+  const matches = useMediaQuery("(min-width:500px)");
   useEffect(() => {
     // const options = {
     //   method: "GET",
@@ -136,27 +138,44 @@ const PopularTable = () => {
       <Table aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Rank</StyledTableCell>
+            <StyledTableCell sx={{ display: matches ? "table-cell" : "none" }}>
+              Rank
+            </StyledTableCell>
             <StyledTableCell align="center">Logo</StyledTableCell>
             <StyledTableCell>App Name</StyledTableCell>
-            <StyledTableCell>Category</StyledTableCell>
+            <StyledTableCell sx={{ display: matches ? "table-cell" : "none" }}>
+              Category
+            </StyledTableCell>
             <StyledTableCell>Downloads</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {dataAll.map((row) => (
             <StyledTableRow key={row.app_id}>
-              <StyledTableCell align="center">
+              <StyledTableCell
+                align="center"
+                sx={{ display: matches ? "table-cell" : "none" }}
+              >
                 <Typography variant="body1">
                   <StarTwoToneIcon />
                 </Typography>
                 <Typography variant="subtitle1">{row.rating}</Typography>
               </StyledTableCell>
               <StyledTableCell>
-                <img src={row.app_icon} style={{ width: 50, height: 50 }} />
+                <img
+                  src={row.app_icon}
+                  style={{
+                    width: matches ? 50 : 30,
+                    height: matches ? 50 : 30,
+                  }}
+                />
               </StyledTableCell>
               <StyledTableCell>{row.app_name}</StyledTableCell>
-              <StyledTableCell>{row.app_category}</StyledTableCell>
+              <StyledTableCell
+                sx={{ display: matches ? "table-cell" : "none" }}
+              >
+                {row.app_category}
+              </StyledTableCell>
               <StyledTableCell>{row.num_downloads}</StyledTableCell>
             </StyledTableRow>
           ))}
