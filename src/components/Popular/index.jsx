@@ -20,11 +20,13 @@ const Popular = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} lg={6} p={2}>
-        Android
+        <Typography variant="h6" sx={{ textAlign: "center" }}>
+          Top apps on Android platform
+        </Typography>
         <PopularTable />
       </Grid>
-      <Grid item xs={12} lg={6} p={2}>
-        Apple
+      <Grid item xs={12} lg={6} p={2} sx={{ textAlign: "center" }}>
+        <Typography variant="h6">Top apps on iOS platform</Typography>
         <PopularTable />
       </Grid>
     </Grid>
