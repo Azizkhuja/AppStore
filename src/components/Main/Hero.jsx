@@ -39,6 +39,7 @@ const Hero = () => {
               ":hover": {
                 backgroundColor: "#fff",
                 color: "#000",
+                boxShadow: "none",
               },
             }}
           >
