@@ -1,3 +1,4 @@
+import LatestNews from "./LatestNews";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -9,6 +10,7 @@ const News = () => {
       <Typography variant={medium ? "h5" : "h6"} my={3}>
         Latest guides, comparisons and news about apps
       </Typography>
+      <LatestNews />
     </Grid>
   );
 };
