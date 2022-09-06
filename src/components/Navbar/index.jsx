@@ -10,7 +10,6 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
-import brandLogo from "../../assets/moon.svg";
 
 function Navbar() {
   return (
