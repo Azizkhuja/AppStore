@@ -9,6 +9,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import Skeleton from "@mui/material/Skeleton";
 
 const FeaturesCard = () => {
   const cardInfo = [
@@ -54,27 +55,31 @@ const FeaturesCard = () => {
           sx={{ display: "flex", justifyContent: "center" }}
           key={card.id}
         >
-          <Card
-            sx={{
-              display: "inline-block",
-              border: "1px solid #e3e5e8",
-              paddingLeft: 2,
-              paddingRight: 2,
-            }}
-          >
-            <CardContent
+          {card ? (
+            <Card
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                display: "inline-block",
+                border: "1px solid #e3e5e8",
+                paddingLeft: 2,
+                paddingRight: 2,
               }}
             >
-              {card.img}
-              <Typography variant="h6" mt={1}>
-                {card.title}
-              </Typography>
-            </CardContent>
-          </Card>
+              <CardContent
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                {card.img}
+                <Typography variant="h6" mt={1}>
+                  {card.title}
+                </Typography>
+              </CardContent>
+            </Card>
+          ) : (
+            <Skeleton variant="rounded" width={145} height={106} />
+          )}
         </Grid>
       ))}
     </Grid>
