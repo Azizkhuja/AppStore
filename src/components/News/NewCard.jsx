@@ -1,7 +1,7 @@
 import React from "react";
 
 const NewCard = () => {
-  return <div>NewCard</div>;
+  return <div>New card goes here</div>;
 };
 
 export default NewCard;
