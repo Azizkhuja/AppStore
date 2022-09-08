@@ -1,4 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
+import ChunkNews from "./ChunkNews";
 import TechCrunchNewsCard from "./TechCrunchNewsCard";
 
 const LatestNews = () => {
@@ -33,8 +34,7 @@ const LatestNews = () => {
         />
       </Grid>
       <Grid item md={4}>
-        This is for 2 item is the row This is for 2 item is the row This is for
-        2 item is the rows
+        <ChunkNews />
       </Grid>
     </Grid>
   );
