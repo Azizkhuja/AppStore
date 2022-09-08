@@ -7,13 +7,13 @@ const LatestNews = () => {
     <Grid container spacing={1}>
       <Grid item xs={12} md={4}>
         <TechCrunchNewsCard
-          newTitle={"newTitle"}
+          newsTitle={"newTitle"}
           newsImg={"newsImg"}
           newsDate={"newsDate"}
           newsLink={"newsLink"}
         />
         <TechCrunchNewsCard
-          newTitle={"newTitle2"}
+          newsTitle={"newsTitle2"}
           newsImg={"newsImg2"}
           newsDate={"newsDate2"}
           newsLink={"newsLink2"}
@@ -21,13 +21,13 @@ const LatestNews = () => {
       </Grid>
       <Grid item md={4}>
         <TechCrunchNewsCard
-          newTitle={"newTitle3"}
+          newsTitle={"newsTitle3"}
           newsImg={"newsImg3"}
           newsDate={"newsDate3"}
           newsLink={"newsLink3"}
         />
         <TechCrunchNewsCard
-          newTitle={"newTitle4"}
+          newsTitle={"newsTitle4"}
           newsImg={"newsImg4"}
           newsDate={"newsDate4"}
           newsLink={"newsLink4"}
