@@ -34,30 +34,36 @@ const LatestNews = () => {
         />
       </Grid>
       <Grid item md={4}>
-        <ChunkNews
-          chunkNewsTitle={"Chunk title"}
-          chunkNewsImg={"Image"}
-          chunkNewsDate={"21.02.2012"}
-          chunkNewsLink={"test"}
-        />
-        <ChunkNews
-          chunkNewsTitle={"Chunk title"}
-          chunkNewsImg={"Image"}
-          chunkNewsDate={"21.02.2012"}
-          chunkNewsLink={"test"}
-        />
-        <ChunkNews
-          chunkNewsTitle={"Chunk title"}
-          chunkNewsImg={"Image"}
-          chunkNewsDate={"21.02.2012"}
-          chunkNewsLink={"test"}
-        />
-        <ChunkNews
-          chunkNewsTitle={"Chunk title"}
-          chunkNewsImg={"Image"}
-          chunkNewsDate={"21.02.2012"}
-          chunkNewsLink={"test"}
-        />
+        <Grid container>
+          <Grid item xs={6}>
+            <ChunkNews
+              chunkNewsTitle={"Chunk title"}
+              chunkNewsImg={"Image"}
+              chunkNewsDate={"21.02.2012"}
+              chunkNewsLink={"test"}
+            />
+            <ChunkNews
+              chunkNewsTitle={"Chunk title"}
+              chunkNewsImg={"Image"}
+              chunkNewsDate={"21.02.2012"}
+              chunkNewsLink={"test"}
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <ChunkNews
+              chunkNewsTitle={"Chunk title"}
+              chunkNewsImg={"Image"}
+              chunkNewsDate={"21.02.2012"}
+              chunkNewsLink={"test"}
+            />
+            <ChunkNews
+              chunkNewsTitle={"Chunk title"}
+              chunkNewsImg={"Image"}
+              chunkNewsDate={"21.02.2012"}
+              chunkNewsLink={"test"}
+            />
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
