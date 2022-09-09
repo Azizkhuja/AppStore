@@ -43,7 +43,11 @@ const LatestNews = () => {
             item
             sm={matches ? null : 6}
             xs={smallMatches ? null : 12}
-            sx={{ width: smallMatches ? null : "100%" }}
+            sx={{
+              width: smallMatches ? null : "100%",
+              justifyContent: smallMatches ? null : "space-between",
+              alignItems: smallMatches ? null : "center",
+            }}
           >
             <ChunkNews
               chunkNewsTitle={"Chunk title"}
