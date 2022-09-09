@@ -19,7 +19,7 @@ const LatestNews = () => {
           newsLink={"newsLink2"}
         />
       </Grid>
-      <Grid item md={4}>
+      <Grid item xs={12} md={4}>
         <TechCrunchNewsCard
           newsTitle={"newsTitle3"}
           newsImg={"newsImg3"}
