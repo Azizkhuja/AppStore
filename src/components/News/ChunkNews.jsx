@@ -1,3 +1,5 @@
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -10,8 +12,16 @@ const ChunkNews = ({
   chunkNewsDate,
   chunkNewsLink,
 }) => {
+  const smallMatches = useMediaQuery("(min-width:600px)");
   return (
-    <Card sx={{ display: "flex", marginBottom: 3 }}>
+    <Card
+      sx={{
+        display: "flex",
+        marginBottom: 3,
+        justifyContent: smallMatches ? null : "space-between",
+        alignItems: smallMatches ? null : "center",
+      }}
+    >
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
           <Typography component="div" variant="h5">
