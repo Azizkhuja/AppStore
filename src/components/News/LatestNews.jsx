@@ -40,6 +40,24 @@ const LatestNews = () => {
           chunkNewsDate={"21.02.2012"}
           chunkNewsLink={"test"}
         />
+        <ChunkNews
+          chunkNewsTitle={"Chunk title"}
+          chunkNewsImg={"Image"}
+          chunkNewsDate={"21.02.2012"}
+          chunkNewsLink={"test"}
+        />
+        <ChunkNews
+          chunkNewsTitle={"Chunk title"}
+          chunkNewsImg={"Image"}
+          chunkNewsDate={"21.02.2012"}
+          chunkNewsLink={"test"}
+        />
+        <ChunkNews
+          chunkNewsTitle={"Chunk title"}
+          chunkNewsImg={"Image"}
+          chunkNewsDate={"21.02.2012"}
+          chunkNewsLink={"test"}
+        />
       </Grid>
     </Grid>
   );
