@@ -44,7 +44,7 @@ const LatestNews = () => {
             sm={matches ? null : 6}
             xs={smallMatches ? null : 12}
             sx={{
-              width: smallMatches ? null : "100%",
+              width: "100%",
             }}
           >
             <ChunkNews
@@ -64,7 +64,7 @@ const LatestNews = () => {
             item
             sm={matches ? null : 6}
             xs={smallMatches ? null : 12}
-            sx={{ width: smallMatches ? null : "100%" }}
+            sx={{ width: "100%" }}
           >
             <ChunkNews
               chunkNewsTitle={"Chunk title"}
