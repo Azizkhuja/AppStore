@@ -14,6 +14,13 @@ const Footer = () => {
               <li>Link 3</li>
               <li>Link 4</li>
             </ul>
+            <ul>
+              <li>Social icons</li>
+              <li>Social icons</li>
+              <li>Social icons</li>
+              <li>Social icons</li>
+            </ul>
+            <Typography> &copy; 2022 AppStore. All rights reserved</Typography>
           </Grid>
         </Grid>
       </Container>
