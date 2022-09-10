@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
 }
-.App {
-  background-color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
-  height: auto;
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }
