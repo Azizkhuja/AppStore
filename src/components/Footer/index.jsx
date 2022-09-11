@@ -10,6 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
   const matches = useMediaQuery("(min-width:600px)");
+  const fullYear = new Date().getFullYear();
   return (
     <FooterContainer>
       <Container>
@@ -38,7 +39,9 @@ const Footer = () => {
                 <LinkedInIcon />
               </OrderList>
             </OrderLists>
-            <Typography> &copy; 2022 AppStore. All rights reserved</Typography>
+            <Typography>
+              &copy; {fullYear} AppStore. All rights reserved
+            </Typography>
           </Grid>
         </Grid>
       </Container>
