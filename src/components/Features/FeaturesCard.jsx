@@ -6,10 +6,7 @@ import TrendingUpTwoToneIcon from "@mui/icons-material/TrendingUpTwoTone";
 import ShoppingBagTwoToneIcon from "@mui/icons-material/ShoppingBagTwoTone";
 
 import Grid from "@mui/material/Unstable_Grid2";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Skeleton from "@mui/material/Skeleton";
+import { Card, CardContent, Typography, Skeleton } from "@mui/material";
 
 const FeaturesCard = () => {
   const cardInfo = [
