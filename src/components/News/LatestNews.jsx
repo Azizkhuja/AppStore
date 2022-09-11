@@ -21,6 +21,21 @@ const techCrunchData = [
     link: "https://techcrunch.com/2022/09/11/vc-fundraising-gets-weird-as-autumn-nears/",
   },
 ];
+// Engadget Data
+const engadgetData = [
+  {
+    title: "NASA replaces Artemis 1's leaky fuel seals",
+    img: "https://s.yimg.com/uu/api/res/1.2/K02kWkdGZ3WCg64U6BGYnw--~B/Zmk9ZmlsbDtoPTQyMTtweW9mZj0wO3c9NjQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2022-09/0c06aa80-31f7-11ed-97d7-ab77b22f6ae6.cf.jpg",
+    dateTime: "3 hours ago",
+    link: "https://www.engadget.com/nasa-replaces-leaky-sls-hydrogen-fuel-seal-173936142.html",
+  },
+  {
+    title: "Disney is remastering Sega Genesis classic ‘Gargoyles’",
+    img: "https://s.yimg.com/uu/api/res/1.2/RcKvb3u3uEQL5LXWL_.6lQ--~B/Zmk9ZmlsbDtoPTQyMTtweW9mZj0wO3c9NjQwO2FwcGlkPXl0YWNoeW9u/https://s.yimg.com/os/creatr-uploaded-images/2022-09/7cb60cc0-31e9-11ed-b96d-ebcefbd0ff89.cf.jpg",
+    dateTime: "4 hours ago",
+    link: "https://www.engadget.com/disney-remastering-garogyles-155559137.html",
+  },
+];
 
 const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
@@ -44,6 +59,25 @@ const LatestNews = () => {
     //     console.error(error);
     //   });
   }, []);
+  // const getDataFrom = () => {
+  //   const options = {
+  //     method: "GET",
+  //     url: "https://tech-news3.p.rapidapi.com/engadget",
+  //     headers: {
+  //       "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
+  //       "X-RapidAPI-Host": "tech-news3.p.rapidapi.com",
+  //     },
+  //   };
+
+  //   axios
+  //     .request(options)
+  //     .then(function (response) {
+  //       console.log(response.data);
+  //     })
+  //     .catch(function (error) {
+  //       console.error(error);
+  //     });
+  // };
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} md={4}>
@@ -57,18 +91,14 @@ const LatestNews = () => {
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
-        <TechCrunchNewsCard
-          newsTitle={"newsTitle3"}
-          newsImg={"newsImg3"}
-          newsDate={"newsDate3"}
-          newsLink={"newsLink3"}
-        />
-        <TechCrunchNewsCard
-          newsTitle={"newsTitle4"}
-          newsImg={"newsImg4"}
-          newsDate={"newsDate4"}
-          newsLink={"newsLink4"}
-        />
+        {engadgetData.map((item) => (
+          <TechCrunchNewsCard
+            newsTitle={item.title}
+            newsImg={item.img}
+            newsDate={item.dateTime}
+            newsLink={item.link}
+          />
+        ))}
       </Grid>
       <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
         <Grid container>
