@@ -1,5 +1,10 @@
 import { Container, Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+// Social icons
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
   return (
