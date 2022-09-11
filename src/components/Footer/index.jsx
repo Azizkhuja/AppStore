@@ -15,16 +15,26 @@ const Footer = () => {
           <Grid item xs={12}>
             <Typography>Logo</Typography>
             <OrderLists>
-              <OrderList>OrderListnk 1</OrderList>
-              <OrderList>OrderListnk 2</OrderList>
-              <OrderList>OrderListnk 3</OrderList>
-              <OrderList>OrderListnk 4</OrderList>
+              <OrderList>Home</OrderList>
+              <OrderList>About us</OrderList>
+              <OrderList>Our crew</OrderList>
+              <OrderList>Careers</OrderList>
+              <OrderList>Media room</OrderList>
+              <OrderList>Partner with us</OrderList>
             </OrderLists>
             <OrderLists>
-              <OrderList>Social icons</OrderList>
-              <OrderList>Social icons</OrderList>
-              <OrderList>Social icons</OrderList>
-              <OrderList>Social icons</OrderList>
+              <OrderList>
+                <FacebookIcon />
+              </OrderList>
+              <OrderList>
+                <TwitterIcon />
+              </OrderList>
+              <OrderList>
+                <InstagramIcon />
+              </OrderList>
+              <OrderList>
+                <LinkedInIcon />
+              </OrderList>
             </OrderLists>
             <Typography> &copy; 2022 AppStore. All rights reserved</Typography>
           </Grid>
