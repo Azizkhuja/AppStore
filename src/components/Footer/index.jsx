@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 // Social icons
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -16,7 +17,9 @@ const Footer = () => {
       <Container>
         <Grid container spacing={1} sx={{ textAlign: "center" }}>
           <Grid item xs={12}>
-            <Typography>Logo</Typography>
+            <ArchitectureTwoToneIcon
+              sx={{ color: "#fff", fontSize: matches ? 60 : 50 }}
+            />
             <OrderLists style={{ flexDirection: matches ? "row" : "column" }}>
               <OrderList>Home</OrderList>
               <OrderList>About us</OrderList>
@@ -61,6 +64,7 @@ const FooterContainer = styled.footer`
   color: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
+  text-transform: uppercase;
 `;
 
 export default Footer;
