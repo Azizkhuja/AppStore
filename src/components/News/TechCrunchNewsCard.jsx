@@ -16,8 +16,8 @@ const TechCrunchNewsCard = ({ newsTitle, newsImg, newsDate, newsLink }) => {
             <CardMedia
               component="img"
               height="140"
-              image={{ newsImg }}
-              alt="green iguana"
+              image={newsImg}
+              alt={newsImg}
             />
             <CardContent>
               <Typography>{newsDate}</Typography>
