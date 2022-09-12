@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -81,23 +81,27 @@ const LatestNews = () => {
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} md={4}>
-        {techCrunchData.map((item) => (
-          <TechCrunchNewsCard
-            newsTitle={item.title}
-            newsImg={item.img}
-            newsDate={item.dateTime}
-            newsLink={item.link}
-          />
+        {techCrunchData.map((item, idx) => (
+          <React.Fragment key={idx}>
+            <TechCrunchNewsCard
+              newsTitle={item.title}
+              newsImg={item.img}
+              newsDate={item.dateTime}
+              newsLink={item.link}
+            />
+          </React.Fragment>
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
-        {engadgetData.map((item) => (
-          <TechCrunchNewsCard
-            newsTitle={item.title}
-            newsImg={item.img}
-            newsDate={item.dateTime}
-            newsLink={item.link}
-          />
+        {engadgetData.map((item, idx) => (
+          <React.Fragment key={idx}>
+            <TechCrunchNewsCard
+              newsTitle={item.title}
+              newsImg={item.img}
+              newsDate={item.dateTime}
+              newsLink={item.link}
+            />
+          </React.Fragment>
         ))}
       </Grid>
       <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
