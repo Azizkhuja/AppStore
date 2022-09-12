@@ -16,25 +16,21 @@ const ChunkNews = ({
         marginBottom: 3,
         justifyContent: smallMatches ? null : "space-between",
         alignItems: smallMatches ? null : "center",
+        maxHeight: 124,
+        minHeight: 120,
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
-          <Typography component="div" variant="h5">
+          <Typography variant="subtitle2">{chunkNewsTitle}</Typography>
+          <Typography variant="caption" color="text.secondary" component="div">
             {chunkNewsDate}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="text.secondary"
-            component="div"
-          >
-            {chunkNewsTitle}
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
-        sx={{ width: 151 }}
+        sx={{ width: 140 }}
         image={chunkNewsImg}
         alt="Live from space album cover"
       />

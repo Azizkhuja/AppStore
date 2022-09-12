@@ -36,6 +36,7 @@ const engadgetData = [
     link: "https://www.engadget.com/disney-remastering-garogyles-155559137.html",
   },
 ];
+// wiredData Data fetch dat from wiredData
 const wiredData = [
   {
     title: "The FTC Is Closing in on Runaway AI",
@@ -50,7 +51,23 @@ const wiredData = [
     link: "https://www.wired.com/story/alphabet-deepmind-ai-humanoids-soccer-camp/",
   },
 ];
-
+// 9to5Mac Data fetch dat from 9to5Mac
+const nineToFiveData = [
+  {
+    title:
+      "Download the official iPhone 14 and 14 Pro wallpapers in full resolution right here",
+    img: "https://9to5mac.com/wp-content/uploads/sites/6/2022/09/iPhone-14-wallpapers.jpg?quality=82&strip=all&w=1600",
+    dateTime: "Sep. 12th 2022 1:33 pm PT",
+    link: "https://9to5mac.com/2022/09/12/download-iphone-14-14-pro-wallpapers/",
+  },
+  {
+    title:
+      "Apple now provides AirPods release notes (and you’ll never guess what they say)",
+    img: "https://9to5mac.com/wp-content/uploads/sites/6/2022/09/airpods-firmware-ios-16.jpg?quality=82&strip=all&w=1600",
+    dateTime: "Sep. 12th 2022 12:54 pm PT",
+    link: "https://9to5mac.com/2022/09/12/airpods-release-notes-ios-16/",
+  },
+];
 const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
   const smallMatches = useMediaQuery("(min-width:600px)");
@@ -58,7 +75,7 @@ const LatestNews = () => {
   useEffect(() => {
     // const options = {
     //   method: "GET",
-    //   url: "https://tech-news3.p.rapidapi.com/wired",
+    //   url: "https://tech-news3.p.rapidapi.com/nineto5mac",
     //   headers: {
     //     "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
     //     "X-RapidAPI-Host": "tech-news3.p.rapidapi.com",
@@ -123,18 +140,15 @@ const LatestNews = () => {
             xs={smallMatches ? null : 12}
             sx={{ width: "100%" }}
           >
-            <ChunkNews
-              chunkNewsTitle={"Chunk title"}
-              chunkNewsImg={"Image"}
-              chunkNewsDate={"21.02.2012"}
-              chunkNewsLink={"test"}
-            />
-            <ChunkNews
-              chunkNewsTitle={"Chunk title"}
-              chunkNewsImg={"Image"}
-              chunkNewsDate={"21.02.2012"}
-              chunkNewsLink={"test"}
-            />
+            {nineToFiveData.map((item, idx) => (
+              <ChunkNews
+                key={idx}
+                chunkNewsTitle={item.title}
+                chunkNewsImg={item.img}
+                chunkNewsDate={item.dateTime}
+                chunkNewsLink={item.link}
+              />
+            ))}
           </Grid>
         </Grid>
       </Grid>
