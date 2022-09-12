@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ChunkNews from "./ChunkNews";
 import TechCrunchNewsCard from "./TechCrunchNewsCard";
 
-// TechCrunch data
+// TechCrunch data fetch data from TechCrunch
 const techCrunchData = [
   {
     title: "The tech industry needs a labor movement",
@@ -21,7 +21,7 @@ const techCrunchData = [
     link: "https://techcrunch.com/2022/09/11/vc-fundraising-gets-weird-as-autumn-nears/",
   },
 ];
-// Engadget Data
+// Engadget Data fetch dat from Engadget
 const engadgetData = [
   {
     title: "NASA replaces Artemis 1's leaky fuel seals",
@@ -36,6 +36,20 @@ const engadgetData = [
     link: "https://www.engadget.com/disney-remastering-garogyles-155559137.html",
   },
 ];
+const wiredData = [
+  {
+    title: "The FTC Is Closing in on Runaway AI",
+    para: "By Khari Johnson",
+    img: "https://media.wired.com/photos/631a70b320bc56769c413043/4:3/w_1600%2Cc_limit/business-ftc-ai.jpg",
+    link: "https://www.wired.com/story/ftc-ai-regulation/",
+  },
+  {
+    title: "Why DeepMind Is Sending AI Humanoids to Soccer Camp",
+    para: "By Amit Katwala",
+    img: "https://media.wired.com/photos/631134163dfe1372fb611162/4:3/w_1600%2Cc_limit/soccer_HZ_science_GettyImages-520264154.jpg",
+    link: "https://www.wired.com/story/alphabet-deepmind-ai-humanoids-soccer-camp/",
+  },
+];
 
 const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
@@ -44,7 +58,7 @@ const LatestNews = () => {
   useEffect(() => {
     // const options = {
     //   method: "GET",
-    //   url: "https://tech-news3.p.rapidapi.com/techcrunch",
+    //   url: "https://tech-news3.p.rapidapi.com/wired",
     //   headers: {
     //     "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
     //     "X-RapidAPI-Host": "tech-news3.p.rapidapi.com",
@@ -59,49 +73,28 @@ const LatestNews = () => {
     //     console.error(error);
     //   });
   }, []);
-  // const getDataFrom = () => {
-  //   const options = {
-  //     method: "GET",
-  //     url: "https://tech-news3.p.rapidapi.com/engadget",
-  //     headers: {
-  //       "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
-  //       "X-RapidAPI-Host": "tech-news3.p.rapidapi.com",
-  //     },
-  //   };
-
-  //   axios
-  //     .request(options)
-  //     .then(function (response) {
-  //       console.log(response.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.error(error);
-  //     });
-  // };
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} md={4}>
         {techCrunchData.map((item, idx) => (
-          <React.Fragment key={idx}>
-            <TechCrunchNewsCard
-              newsTitle={item.title}
-              newsImg={item.img}
-              newsDate={item.dateTime}
-              newsLink={item.link}
-            />
-          </React.Fragment>
+          <TechCrunchNewsCard
+            key={idx}
+            newsTitle={item.title}
+            newsImg={item.img}
+            newsDate={item.dateTime}
+            newsLink={item.link}
+          />
         ))}
       </Grid>
       <Grid item xs={12} md={4}>
         {engadgetData.map((item, idx) => (
-          <React.Fragment key={idx}>
-            <TechCrunchNewsCard
-              newsTitle={item.title}
-              newsImg={item.img}
-              newsDate={item.dateTime}
-              newsLink={item.link}
-            />
-          </React.Fragment>
+          <TechCrunchNewsCard
+            key={idx}
+            newsTitle={item.title}
+            newsImg={item.img}
+            newsDate={item.dateTime}
+            newsLink={item.link}
+          />
         ))}
       </Grid>
       <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
@@ -114,18 +107,15 @@ const LatestNews = () => {
               width: "100%",
             }}
           >
-            <ChunkNews
-              chunkNewsTitle={"Chunk title"}
-              chunkNewsImg={"Image"}
-              chunkNewsDate={"21.02.2012"}
-              chunkNewsLink={"test"}
-            />
-            <ChunkNews
-              chunkNewsTitle={"Chunk title"}
-              chunkNewsImg={"Image"}
-              chunkNewsDate={"21.02.2012"}
-              chunkNewsLink={"test"}
-            />
+            {wiredData.map((item, idx) => (
+              <ChunkNews
+                key={idx}
+                chunkNewsTitle={item.title}
+                chunkNewsImg={item.img}
+                chunkNewsDate={item.para}
+                chunkNewsLink={item.link}
+              />
+            ))}
           </Grid>
           <Grid
             item
