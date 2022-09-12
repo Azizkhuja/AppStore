@@ -15,7 +15,7 @@ const TechCrunchNewsCard = ({ newsTitle, newsImg, newsDate, newsLink }) => {
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height="153"
               image={newsImg}
               alt={newsImg}
             />
