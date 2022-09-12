@@ -32,7 +32,7 @@ const ChunkNews = ({
         component="img"
         sx={{ width: 140 }}
         image={chunkNewsImg}
-        alt="Live from space album cover"
+        alt={chunkNewsTitle}
       />
     </Card>
   );
