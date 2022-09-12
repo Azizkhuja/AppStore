@@ -30,16 +30,16 @@ const Footer = () => {
             </OrderLists>
             <OrderLists>
               <OrderList>
-                <FacebookIcon />
+                <FacebookIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
-                <TwitterIcon />
+                <TwitterIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
-                <InstagramIcon />
+                <InstagramIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
-                <LinkedInIcon />
+                <LinkedInIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
             </OrderLists>
             <Typography sx={{ fontSize: matches ? "1rem" : "0.7rem" }}>
