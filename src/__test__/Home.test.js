@@ -3,8 +3,4 @@ import "@testing-library/jest-dom";
 
 import Navbar from "../components/Navbar";
 
-it("test", () => {
-  render(<Navbar />);
-  const elTest = screen.getByText(/App Store/i);
-  expect(elTest).toBeInTheDocument();
-});
+describe("Should test Home page and nested components", () => {});
