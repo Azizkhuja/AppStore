@@ -92,7 +92,7 @@ const LatestNews = () => {
   }, []);
   return (
     <Grid container spacing={1}>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} sm={6} md={4}>
         {techCrunchData.map((item, idx) => (
           <TechCrunchNewsCard
             key={idx}
@@ -103,7 +103,7 @@ const LatestNews = () => {
           />
         ))}
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} sm={6} md={4}>
         {engadgetData.map((item, idx) => (
           <TechCrunchNewsCard
             key={idx}
