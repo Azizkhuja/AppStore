@@ -12,7 +12,7 @@ const TechCrunchNewsCard = ({ newsTitle, newsImg, newsDate, newsLink }) => {
     <Grid container>
       <Grid item xs={12}>
         <Card>
-          <CardActionArea>
+          <CardActionArea href={newsLink} target="_blank">
             <CardMedia
               component="img"
               height="153"
