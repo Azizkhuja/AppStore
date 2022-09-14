@@ -48,4 +48,12 @@ describe("should get home page and nested components", () => {
     const elTest = screen.getByRole("heading", { name: /start saving money/i });
     expect(elTest).toBeInTheDocument();
   });
+
+  it("should get main page of hero subheadline", () => {
+    render(<Features />);
+    const elTest = screen.getByRole("heading", {
+      name: /find better deals across 100\+ categories/i,
+    });
+    expect(elTest).toBeInTheDocument();
+  });
 });
