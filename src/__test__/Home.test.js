@@ -22,4 +22,10 @@ describe("Should test Home page and nested components", () => {
     const elTest = screen.getByTestId("list-contianer").children.length;
     expect(elTest).toBe(3);
   });
+
+  it("should get main page of headline", () => {
+    render(<Hero />);
+    const elTest = screen.getByTestId("hero-image");
+    expect(elTest).toBeInTheDocument();
+  });
 });

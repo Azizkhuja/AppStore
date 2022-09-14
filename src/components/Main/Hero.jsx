@@ -47,7 +47,7 @@ const Hero = () => {
           </HeroButton>
         </Grid>
         <Grid sm={6}>
-          <HeroImage src={logo} alt="main-image" />
+          <HeroImage data-testid="hero-image" src={logo} alt="main-image" />
         </Grid>
       </Grid>
     </Box>
