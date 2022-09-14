@@ -35,4 +35,10 @@ describe("should get home page and nested components", () => {
     const elTest = screen.getByTestId("hero-image");
     expect(elTest).toBeInTheDocument();
   });
+
+  it("should get main page of hero search input", () => {
+    render(<Navbar />);
+    const elTest = screen.getByRole("textbox", { name: /search/i });
+    expect(elTest).toBeInTheDocument();
+  });
 });
