@@ -46,6 +46,7 @@ function Navbar() {
               <SearchIcon style={{ color: "#000" }} />
             </SearchIconWrapper>
             <StyledInputBase
+              data-testid="search-input"
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
               style={{ color: "#000" }}
