@@ -27,7 +27,7 @@ const Hero = () => {
           <StyledTypography variant={medium ? "h2" : "h3"} gutterBottom>
             Get single application statistics
           </StyledTypography>
-          <OrderList>
+          <OrderList data-testid="list-contianer">
             <li>Join over 1 million Finder members*</li>
             <li>Start with a FREE credit score & report</li>
             <li>Find a better deal in minutes</li>
