@@ -9,6 +9,7 @@ import "@testing-library/jest-dom";
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Main/Hero";
+import Features from "../components/Features";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -39,6 +40,12 @@ describe("should get home page and nested components", () => {
   it("should get main page of hero search input", () => {
     render(<Navbar />);
     const elTest = screen.getByRole("textbox", { name: /search/i });
+    expect(elTest).toBeInTheDocument();
+  });
+
+  it("should get main page of hero subheadline", () => {
+    render(<Features />);
+    const elTest = screen.getByRole("heading", { name: /start saving money/i });
     expect(elTest).toBeInTheDocument();
   });
 });
