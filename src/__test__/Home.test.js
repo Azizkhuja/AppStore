@@ -13,6 +13,7 @@ import Features from "../components/Features";
 import Partners from "../components/Main/Partners";
 import Popular from "../components/Popular";
 import PopularTable from "../components/Popular/PopularTable";
+import News from "../components/News";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -97,5 +98,13 @@ describe("should get home page and nested components", () => {
     render(<PopularTable />);
     const table = screen.getByTestId("table-container");
     expect(table).toBeInTheDocument();
+  });
+
+  it("should get main page of card news component", () => {
+    render(<News />);
+    const cardNews = screen.getByRole("heading", {
+      name: /latest guides, comparisons and news about apps/i,
+    });
+    expect(cardNews).toBeInTheDocument();
   });
 });
