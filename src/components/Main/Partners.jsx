@@ -44,6 +44,7 @@ const Partners = () => {
         sx={{
           display: "flex",
         }}
+        data-testid="partners-container"
       >
         {partnersLogo.map((partner) => (
           <Grid

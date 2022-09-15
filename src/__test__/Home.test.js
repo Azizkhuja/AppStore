@@ -10,6 +10,7 @@ import "@testing-library/jest-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Main/Hero";
 import Features from "../components/Features";
+import Partners from "../components/Main/Partners";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -55,5 +56,12 @@ describe("should get home page and nested components", () => {
       name: /find better deals across 100\+ categories/i,
     });
     expect(elTest).toBeInTheDocument();
+  });
+
+  it("should get main page partners container", () => {
+    render(<Partners />);
+    const getOrderListItemContainer =
+      screen.getByTestId("partners-container").children.length;
+    expect(getOrderListItemContainer).toBe(6);
   });
 });
