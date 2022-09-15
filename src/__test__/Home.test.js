@@ -75,4 +75,12 @@ describe("should get home page and nested components", () => {
     });
     expect(getPopularHeading).toBeInTheDocument();
   });
+
+  it("should get main page partners container", () => {
+    render(<Popular />);
+    const getPopularHeading = screen.getByRole("heading", {
+      name: /top apps on android platform/i,
+    });
+    expect(getPopularHeading).toBeInTheDocument();
+  });
 });
