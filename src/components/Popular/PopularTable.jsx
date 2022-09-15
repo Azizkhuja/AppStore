@@ -134,7 +134,7 @@ const PopularTable = () => {
     //   });
   }, []);
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-testid="table-container">
       <Table aria-label="customized table">
         <TableHead>
           <TableRow>

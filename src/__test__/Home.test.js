@@ -12,6 +12,7 @@ import Hero from "../components/Main/Hero";
 import Features from "../components/Features";
 import Partners from "../components/Main/Partners";
 import Popular from "../components/Popular";
+import PopularTable from "../components/Popular/PopularTable";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -90,5 +91,11 @@ describe("should get home page and nested components", () => {
       name: /top apps on ios platform/i,
     });
     expect(getPopularHeading).toBeInTheDocument();
+  });
+
+  it("should get main page of table", () => {
+    render(<PopularTable />);
+    const table = screen.getByTestId("table-container");
+    expect(table).toBeInTheDocument();
   });
 });
