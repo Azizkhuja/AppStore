@@ -35,35 +35,37 @@ describe("should get home page and nested components", () => {
 
   it("should get main page of hero image", () => {
     render(<Hero />);
-    const elTest = screen.getByTestId("hero-image");
-    expect(elTest).toBeInTheDocument();
+    const heroImage = screen.getByTestId("hero-image");
+    expect(heroImage).toBeInTheDocument();
   });
 
   it("should get main page of hero search input", () => {
     render(<Navbar />);
-    const elTest = screen.getByRole("textbox", { name: /search/i });
-    expect(elTest).toBeInTheDocument();
+    const searchInput = screen.getByRole("textbox", { name: /search/i });
+    expect(searchInput).toBeInTheDocument();
   });
 
   it("should get main page of hero subheadline", () => {
     render(<Features />);
-    const elTest = screen.getByRole("heading", { name: /start saving money/i });
-    expect(elTest).toBeInTheDocument();
+    const featuresHeadingTitle = screen.getByRole("heading", {
+      name: /start saving money/i,
+    });
+    expect(featuresHeadingTitle).toBeInTheDocument();
   });
 
   it("should get main page of hero subheadline", () => {
     render(<Features />);
-    const elTest = screen.getByRole("heading", {
+    const featuresHeading = screen.getByRole("heading", {
       name: /find better deals across 100\+ categories/i,
     });
-    expect(elTest).toBeInTheDocument();
+    expect(featuresHeading).toBeInTheDocument();
   });
 
   it("should get main page partners container", () => {
     render(<Partners />);
-    const getOrderListItemContainer =
+    const partnersContainer =
       screen.getByTestId("partners-container").children.length;
-    expect(getOrderListItemContainer).toBe(6);
+    expect(partnersContainer).toBe(6);
   });
 
   it("should get main page partners container", () => {
