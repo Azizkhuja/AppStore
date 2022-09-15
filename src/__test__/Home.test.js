@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Main/Hero";
 import Features from "../components/Features";
 import Partners from "../components/Main/Partners";
+import Popular from "../components/Popular";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -63,5 +64,13 @@ describe("should get home page and nested components", () => {
     const getOrderListItemContainer =
       screen.getByTestId("partners-container").children.length;
     expect(getOrderListItemContainer).toBe(6);
+  });
+
+  it("should get main page partners container", () => {
+    render(<Popular />);
+    const getPopularHeading = screen.getByRole("heading", {
+      name: /the most popular apps of the decade/i,
+    });
+    expect(getPopularHeading).toBeInTheDocument();
   });
 });
