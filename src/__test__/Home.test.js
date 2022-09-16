@@ -14,6 +14,7 @@ import Partners from "../components/Main/Partners";
 import Popular from "../components/Popular";
 import PopularTable from "../components/Popular/PopularTable";
 import News from "../components/News";
+import ChunkNews from "../components/News/ChunkNews";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -105,6 +106,12 @@ describe("should get home page and nested components", () => {
   it("should get main page of table", () => {
     render(<PopularTable />);
     const table = screen.getByTestId("table-container");
+    expect(table).toBeInTheDocument();
+  });
+
+  it("should get main page of chunk news card", () => {
+    render(<ChunkNews />);
+    const table = screen.getByTestId("chunk-card");
     expect(table).toBeInTheDocument();
   });
 });

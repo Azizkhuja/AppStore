@@ -18,7 +18,11 @@ const ChunkNews = ({
 }) => {
   const smallMatches = useMediaQuery("(min-width:600px)");
   return (
-    <CardActionArea href={chunkNewsLink} target="_blank">
+    <CardActionArea
+      href={chunkNewsLink}
+      target="_blank"
+      data-testid="chunk-card"
+    >
       <Card
         sx={{
           display: "flex",
