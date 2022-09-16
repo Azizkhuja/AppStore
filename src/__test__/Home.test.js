@@ -23,6 +23,11 @@ describe("should get home page and nested components", () => {
     const getTitle = screen.getByText(/app store/i);
     expect(getTitle).toBeInTheDocument();
   });
+  it("should get navbar hamburger menu", () => {
+    render(<Navbar />);
+    const getTitle = screen.getByTestId("MenuIcon");
+    expect(getTitle).toBeInTheDocument();
+  });
 
   it("should get main page of headline", () => {
     render(<Hero />);
