@@ -46,7 +46,10 @@ const Footer = () => {
                 <LinkedInIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
             </OrderLists>
-            <Typography sx={{ fontSize: matches ? "1rem" : "0.7rem" }}>
+            <Typography
+              sx={{ fontSize: matches ? "1rem" : "0.7rem" }}
+              data-testid="footer-year"
+            >
               &copy; {fullYear} AppStore. All rights reserved
             </Typography>
           </Grid>

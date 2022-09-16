@@ -128,4 +128,10 @@ describe("should get home page and nested components", () => {
       screen.getByTestId("footer-list").children.length;
     expect(footerItemContainer).toBe(6);
   });
+
+  it("should get main page of footer year", () => {
+    render(<Footer />);
+    const footerYear = screen.getByTestId("footer-year");
+    expect(footerYear).toBeInTheDocument;
+  });
 });
