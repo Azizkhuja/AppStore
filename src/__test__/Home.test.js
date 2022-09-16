@@ -94,17 +94,17 @@ describe("should get home page and nested components", () => {
     expect(getPopularHeading).toBeInTheDocument();
   });
 
-  it("should get main page of table", () => {
-    render(<PopularTable />);
-    const table = screen.getByTestId("table-container");
-    expect(table).toBeInTheDocument();
-  });
-
   it("should get main page of card news component", () => {
     render(<News />);
     const cardNews = screen.getByRole("heading", {
       name: /latest guides, comparisons and news about apps/i,
     });
     expect(cardNews).toBeInTheDocument();
+  });
+
+  it("should get main page of table", () => {
+    render(<PopularTable />);
+    const table = screen.getByTestId("table-container");
+    expect(table).toBeInTheDocument();
   });
 });
