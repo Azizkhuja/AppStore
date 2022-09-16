@@ -15,6 +15,7 @@ import Popular from "../components/Popular";
 import PopularTable from "../components/Popular/PopularTable";
 import News from "../components/News";
 import ChunkNews from "../components/News/ChunkNews";
+import Footer from "../components/Footer";
 
 describe("should get home page and nested components", () => {
   it("should get navbar title", () => {
@@ -112,6 +113,12 @@ describe("should get home page and nested components", () => {
   it("should get main page of chunk news card", () => {
     render(<ChunkNews />);
     const table = screen.getByTestId("chunk-card");
+    expect(table).toBeInTheDocument();
+  });
+
+  it("should get main page of chunk news card", () => {
+    render(<Footer />);
+    const table = screen.getByTestId("ArchitectureTwoToneIcon");
     expect(table).toBeInTheDocument();
   });
 });

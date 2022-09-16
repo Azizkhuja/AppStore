@@ -18,6 +18,7 @@ const Footer = () => {
         <Grid container spacing={1} sx={{ textAlign: "center" }}>
           <Grid item xs={12}>
             <ArchitectureTwoToneIcon
+              data-testid="ArchitectureTwoToneIcon"
               sx={{ color: "#fff", fontSize: matches ? 60 : 50 }}
             />
             <OrderLists style={{ flexDirection: matches ? "row" : "column" }}>
