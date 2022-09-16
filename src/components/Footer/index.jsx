@@ -21,7 +21,10 @@ const Footer = () => {
               data-testid="ArchitectureTwoToneIcon"
               sx={{ color: "#fff", fontSize: matches ? 60 : 50 }}
             />
-            <OrderLists style={{ flexDirection: matches ? "row" : "column" }}>
+            <OrderLists
+              style={{ flexDirection: matches ? "row" : "column" }}
+              data-testid="footer-list"
+            >
               <OrderList>Home</OrderList>
               <OrderList>About us</OrderList>
               <OrderList>Our crew</OrderList>

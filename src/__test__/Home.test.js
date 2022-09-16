@@ -121,4 +121,11 @@ describe("should get home page and nested components", () => {
     const table = screen.getByTestId("ArchitectureTwoToneIcon");
     expect(table).toBeInTheDocument();
   });
+
+  it("should get main page of chunk news card", () => {
+    render(<Footer />);
+    const footerItemContainer =
+      screen.getByTestId("footer-list").children.length;
+    expect(footerItemContainer).toBe(6);
+  });
 });
