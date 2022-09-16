@@ -112,17 +112,17 @@ describe("should get home page and nested components", () => {
 
   it("should get main page of chunk news card", () => {
     render(<ChunkNews />);
-    const table = screen.getByTestId("chunk-card");
-    expect(table).toBeInTheDocument();
+    const chunkNewsCard = screen.getByTestId("chunk-card");
+    expect(chunkNewsCard).toBeInTheDocument();
   });
 
-  it("should get main page of chunk news card", () => {
+  it("should get main page of footer logo", () => {
     render(<Footer />);
-    const table = screen.getByTestId("ArchitectureTwoToneIcon");
-    expect(table).toBeInTheDocument();
+    const footerLogo = screen.getByTestId("ArchitectureTwoToneIcon");
+    expect(footerLogo).toBeInTheDocument();
   });
 
-  it("should get main page of chunk news card", () => {
+  it("should get main page of footer item container", () => {
     render(<Footer />);
     const footerItemContainer =
       screen.getByTestId("footer-list").children.length;
