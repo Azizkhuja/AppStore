@@ -9,13 +9,13 @@ const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
   const smallMatches = useMediaQuery("(min-width:600px)");
 
-  const { data, loading, error } = useFetch(
+  const { data: nineToFiveData } = useFetch(
     "https://tech-news3.p.rapidapi.com/nineto5mac"
   );
-  const { data: otherData } = useFetch(
+  const { data: wiredData } = useFetch(
     "https://tech-news3.p.rapidapi.com/wired"
   );
-  const { data: techOtherData } = useFetch(
+  const { data: techCrunchData } = useFetch(
     "https://tech-news3.p.rapidapi.com/techcrunch"
   );
   const { data: engadgetData } = useFetch(
@@ -25,7 +25,7 @@ const LatestNews = () => {
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} sm={6} md={4}>
-        {techOtherData?.map((item, idx) => (
+        {techCrunchData?.map((item, idx) => (
           <TechCrunchNewsCard
             key={idx}
             newsTitle={item.title}
@@ -56,7 +56,7 @@ const LatestNews = () => {
               width: "100%",
             }}
           >
-            {otherData?.map((item, idx) => (
+            {wiredData?.map((item, idx) => (
               <ChunkNews
                 key={idx}
                 chunkNewsTitle={item.title}
@@ -72,7 +72,7 @@ const LatestNews = () => {
             xs={smallMatches ? null : 12}
             sx={{ width: "100%" }}
           >
-            {data?.map((item, idx) => (
+            {nineToFiveData?.map((item, idx) => (
               <ChunkNews
                 key={idx}
                 chunkNewsTitle={item.title}
