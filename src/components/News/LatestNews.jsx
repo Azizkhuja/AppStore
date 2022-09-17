@@ -9,6 +9,19 @@ const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
   const smallMatches = useMediaQuery("(min-width:600px)");
 
+  const { data, loading, error } = useFetch(
+    "https://tech-news3.p.rapidapi.com/nineto5mac"
+  );
+  const { data: otherData } = useFetch(
+    "https://tech-news3.p.rapidapi.com/wired"
+  );
+  const { data: techOtherData } = useFetch(
+    "https://tech-news3.p.rapidapi.com/techcrunch"
+  );
+  const { data: engadgetData } = useFetch(
+    "https://tech-news3.p.rapidapi.com/engadget"
+  );
+
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} sm={6} md={4}>
