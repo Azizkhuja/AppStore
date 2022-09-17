@@ -133,6 +133,12 @@ describe("should get home page and nested components", () => {
       screen.getByTestId("footer-list").children.length;
     expect(footerItemContainer).toBe(6);
   });
+  it("should get main page of footer social icons", () => {
+    render(<Footer />);
+    const footerItemContainer = screen.getByTestId("footer-list-container")
+      .children.length;
+    expect(footerItemContainer).toBe(4);
+  });
 
   it("should get main page of footer year", () => {
     render(<Footer />);

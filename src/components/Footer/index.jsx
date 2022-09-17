@@ -32,7 +32,7 @@ const Footer = () => {
               <OrderList>Media room</OrderList>
               <OrderList>Partner with us</OrderList>
             </OrderLists>
-            <OrderLists>
+            <OrderLists data-testid="footer-list-container">
               <OrderList>
                 <FacebookIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
