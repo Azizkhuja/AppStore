@@ -1,44 +1,79 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Loader from "../Helpers/Loader";
-
+import { Skeleton } from "@mui/material";
 import ChunkNews from "./ChunkNews";
 import TechCrunchNewsCard from "./TechCrunchNewsCard";
 import { useFetch } from "./useFetch";
+
+// const techCrunchData = [
+//   {
+//     title: "The tech industry needs a labor movement",
+//     img: "https://techcrunch.com/wp-content/uploads/2022/01/GettyImages-1234274008-1.jpg?w=300&h=160&crop=1",
+//     dateTime: "Sep 11, 2022",
+//     link: "https://techcrunch.com/2022/09/11/the-tech-industry-needs-a-labor-movement/",
+//   },
+//   {
+//     title: "VC fundraising gets weird as autumn nears",
+//     img: "https://techcrunch.com/wp-content/uploads/2022/09/GettyImages-943401146.jpg?w=300&h=160&crop=1",
+//     dateTime: "Sep 11, 2022",
+//     link: "https://techcrunch.com/2022/09/11/vc-fundraising-gets-weird-as-autumn-nears/",
+//   },
+// ];
 
 const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
   const smallMatches = useMediaQuery("(min-width:600px)");
 
-  const { data: nineToFiveData, loading } = useFetch(
-    "https://tech-news3.p.rapidapi.com/nineto5mac"
-  );
-  const { data: wiredData, loading: wiredLoading } = useFetch(
-    "https://tech-news3.p.rapidapi.com/wired"
-  );
-  const { data: techCrunchData } = useFetch(
+  // const { data: nineToFiveData, loading } = useFetch(
+  //   "https://tech-news3.p.rapidapi.com/nineto5mac"
+  // );
+  // const { data: wiredData, loading: wiredLoading } = useFetch(
+  //   "https://tech-news3.p.rapidapi.com/wired"
+  // );
+  const { data: techCrunchData, loading } = useFetch(
     "https://tech-news3.p.rapidapi.com/techcrunch"
   );
-  const { data: engadgetData } = useFetch(
-    "https://tech-news3.p.rapidapi.com/engadget"
-  );
+  // const { data: engadgetData } = useFetch(
+  //   "https://tech-news3.p.rapidapi.com/engadget"
+  // );
 
-  if (loading) return <Loader />;
+  // if (loading) return <Loader />;
+  const test = () => {
+    if (techCrunchData) {
+      {
+        techCrunchData?.map((item, idx) => (
+          <div>
+            {item ? (
+              <TechCrunchNewsCard
+                key={idx}
+                newsTitle={item.title}
+                newsImg={item.img}
+                newsDate={item.dateTime}
+                newsLink={item.link}
+              />
+            ) : (
+              <Skeleton variant="rounded" width={345} height={306} />
+            )}
+          </div>
+        ));
+      }
+    } else if (loading) {
+      <>
+        <Skeleton variant="rectangular" width={210} height={118} />
+        <Skeleton width="80%" />
+        <Skeleton />
+      </>;
+    }
+  };
 
   return (
     <Grid container spacing={1}>
+      <Grid item xs={12} sm={6} md={4}></Grid>
       <Grid item xs={12} sm={6} md={4}>
-        {techCrunchData?.map((item, idx) => (
-          <TechCrunchNewsCard
-            key={idx}
-            newsTitle={item.title}
-            newsImg={item.img}
-            newsDate={item.dateTime}
-            newsLink={item.link}
-          />
-        ))}
+        {test}
       </Grid>
-      <Grid item xs={12} sm={6} md={4}>
+      {/* <Grid item xs={12} sm={6} md={4}>
         {engadgetData?.map((item, idx) => (
           <TechCrunchNewsCard
             key={idx}
@@ -48,8 +83,8 @@ const LatestNews = () => {
             newsLink={item.link}
           />
         ))}
-      </Grid>
-      <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
+      </Grid> */}
+      {/* <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
         <Grid container>
           <Grid
             item
@@ -86,7 +121,7 @@ const LatestNews = () => {
             ))}
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

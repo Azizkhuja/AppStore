@@ -13,7 +13,7 @@ export const useFetch = (linkToSource) => {
       method: "GET",
       url: linkToSource,
       headers: {
-        "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
+        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
         "X-RapidAPI-Host": "tech-news3.p.rapidapi.com",
       },
     };
