@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Loader from "../Helpers/Loader";
 
 import ChunkNews from "./ChunkNews";
 import TechCrunchNewsCard from "./TechCrunchNewsCard";
@@ -9,10 +10,10 @@ const LatestNews = () => {
   const matches = useMediaQuery("(min-width:900px)");
   const smallMatches = useMediaQuery("(min-width:600px)");
 
-  const { data: nineToFiveData } = useFetch(
+  const { data: nineToFiveData, loading } = useFetch(
     "https://tech-news3.p.rapidapi.com/nineto5mac"
   );
-  const { data: wiredData } = useFetch(
+  const { data: wiredData, loading: wiredLoading } = useFetch(
     "https://tech-news3.p.rapidapi.com/wired"
   );
   const { data: techCrunchData } = useFetch(
@@ -21,6 +22,8 @@ const LatestNews = () => {
   const { data: engadgetData } = useFetch(
     "https://tech-news3.p.rapidapi.com/engadget"
   );
+
+  if (loading) return <Loader />;
 
   return (
     <Grid container spacing={1}>
