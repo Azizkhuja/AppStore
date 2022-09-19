@@ -31,7 +31,7 @@ const LatestNews = () => {
   // const { data: wiredData, loading: wiredLoading } = useFetch(
   //   "https://tech-news3.p.rapidapi.com/wired"
   // );
-  const { data: techCrunchData, loading } = useFetch(
+  const { data: techCrunchData } = useFetch(
     "https://tech-news3.p.rapidapi.com/techcrunch"
   );
   // const { data: engadgetData } = useFetch(
@@ -39,10 +39,11 @@ const LatestNews = () => {
   // );
 
   // if (loading) return <Loader />;
-  const test = () => {
-    if (techCrunchData) {
-      {
-        techCrunchData?.map((item, idx) => (
+
+  return (
+    <Grid container spacing={1}>
+      <Grid item xs={12} sm={6} md={4}>
+        {techCrunchData?.map((item, idx) => (
           <div>
             {item ? (
               <TechCrunchNewsCard
@@ -56,22 +57,7 @@ const LatestNews = () => {
               <Skeleton variant="rounded" width={345} height={306} />
             )}
           </div>
-        ));
-      }
-    } else if (loading) {
-      <>
-        <Skeleton variant="rectangular" width={210} height={118} />
-        <Skeleton width="80%" />
-        <Skeleton />
-      </>;
-    }
-  };
-
-  return (
-    <Grid container spacing={1}>
-      <Grid item xs={12} sm={6} md={4}></Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        {test}
+        ))}
       </Grid>
       {/* <Grid item xs={12} sm={6} md={4}>
         {engadgetData?.map((item, idx) => (
