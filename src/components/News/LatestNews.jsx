@@ -31,32 +31,26 @@ const LatestNews = () => {
   // const { data: wiredData, loading: wiredLoading } = useFetch(
   //   "https://tech-news3.p.rapidapi.com/wired"
   // );
-  const { data: techCrunchData } = useFetch(
+  const { data: techCrunchData, loading } = useFetch(
     "https://tech-news3.p.rapidapi.com/techcrunch"
   );
   // const { data: engadgetData } = useFetch(
   //   "https://tech-news3.p.rapidapi.com/engadget"
   // );
 
-  // if (loading) return <Loader />;
+  if (loading) return <Loader />;
 
   return (
     <Grid container spacing={1}>
       <Grid item xs={12} sm={6} md={4}>
         {techCrunchData?.map((item, idx) => (
-          <div>
-            {item ? (
-              <TechCrunchNewsCard
-                key={idx}
-                newsTitle={item.title}
-                newsImg={item.img}
-                newsDate={item.dateTime}
-                newsLink={item.link}
-              />
-            ) : (
-              <Skeleton variant="rounded" width={345} height={306} />
-            )}
-          </div>
+          <TechCrunchNewsCard
+            key={idx}
+            newsTitle={item.title}
+            newsImg={item.img}
+            newsDate={item.dateTime}
+            newsLink={item.link}
+          />
         ))}
       </Grid>
       {/* <Grid item xs={12} sm={6} md={4}>
@@ -69,8 +63,8 @@ const LatestNews = () => {
             newsLink={item.link}
           />
         ))}
-      </Grid> */}
-      {/* <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
+      </Grid>
+      <Grid item md={4} sx={{ width: matches ? null : "100%" }}>
         <Grid container>
           <Grid
             item
