@@ -8,7 +8,11 @@ const Popular = () => {
   return (
     <Grid container mt={6}>
       <Grid item p={matches ? 0 : 2} sx={{ textAlign: "center" }}>
-        <Typography variant={matches ? "h2" : "h4"} mb={3}>
+        <Typography
+          variant={matches ? "h2" : "h4"}
+          mb={3}
+          sx={{ fontWeight: matches ? 500 : null }}
+        >
           The most popular apps of the decade
         </Typography>
         <Typography variant="body1" mb={2} sx={{ color: "#a9aaaa" }}>
