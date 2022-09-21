@@ -3,10 +3,13 @@ import { Button, Typography, Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import logo from "../../assets/finder_credit_score.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const medium = useMediaQuery("(min-width:900px)");
   const small = useMediaQuery("(min-width:600px)");
+
+  const { t } = useTranslation();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -25,7 +28,7 @@ const Hero = () => {
           }}
         >
           <StyledTypography variant={medium ? "h2" : "h3"} gutterBottom>
-            Get single application statistics
+            {t("title")}
           </StyledTypography>
           <OrderList data-testid="list-contianer">
             <li>Join over 1 million Finder members*</li>
