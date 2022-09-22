@@ -46,7 +46,7 @@ const Hero = () => {
               },
             }}
           >
-            Get free credit report
+            {t("headlineBtn")}
           </HeroButton>
         </Grid>
         <Grid sm={6}>
