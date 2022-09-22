@@ -28,7 +28,7 @@ const Hero = () => {
           }}
         >
           <StyledTypography variant={medium ? "h2" : "h3"} gutterBottom>
-            {t("title")}
+            {t("headline")}
           </StyledTypography>
           <OrderList data-testid="list-contianer">
             <li>Join over 1 million Finder members*</li>
