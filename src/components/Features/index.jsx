@@ -1,11 +1,13 @@
 import FeaturesCard from "./FeaturesCard";
 import styled from "styled-components";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function Features() {
+  const { t } = useTranslation();
   return (
     <div>
-      <StyledHeadline variant="h2">Start saving money</StyledHeadline>
+      <StyledHeadline variant="h2">{t("headlineBtn")}</StyledHeadline>
       <StyledSubHeadline variant="h3">
         Find better deals across 100+ categories
       </StyledSubHeadline>
