@@ -33,7 +33,7 @@ const Hero = () => {
           <OrderList data-testid="list-contianer">
             <li>{t("subHeadline.itemOne")}</li>
             <li>{t("subHeadline.itemTwo")}</li>
-            <li>Find a better deal in minutes</li>
+            <li>{t("subHeadline.itemThree")}</li>
           </OrderList>
           <HeroButton
             variant="contained"
