@@ -32,7 +32,7 @@ const Hero = () => {
           </StyledTypography>
           <OrderList data-testid="list-contianer">
             <li>{t("subHeadline.itemOne")}</li>
-            <li>Start with a FREE credit score & report</li>
+            <li>{t("subHeadline.itemTwo")}</li>
             <li>Find a better deal in minutes</li>
           </OrderList>
           <HeroButton
