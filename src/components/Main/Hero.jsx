@@ -31,7 +31,7 @@ const Hero = () => {
             {t("headline")}
           </StyledTypography>
           <OrderList data-testid="list-contianer">
-            <li>Join over 1 million Finder members*</li>
+            <li>{t("subHeadline.itemOne")}</li>
             <li>Start with a FREE credit score & report</li>
             <li>Find a better deal in minutes</li>
           </OrderList>
