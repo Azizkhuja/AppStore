@@ -7,7 +7,7 @@ function Features() {
   const { t } = useTranslation();
   return (
     <div>
-      <StyledHeadline variant="h2">{t("headlineBtn")}</StyledHeadline>
+      <StyledHeadline variant="h2">{t("heroTitle")}</StyledHeadline>
       <StyledSubHeadline variant="h3">
         Find better deals across 100+ categories
       </StyledSubHeadline>
