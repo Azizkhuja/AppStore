@@ -35,7 +35,7 @@ const FeaturesCard = () => {
     {
       id: 5,
       img: <TrendingUpTwoToneIcon />,
-      title: "Top chart",
+      title: `${t("iconTexts.topChart")}`,
     },
     {
       id: 6,
