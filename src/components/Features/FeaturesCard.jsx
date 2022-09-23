@@ -30,7 +30,7 @@ const FeaturesCard = () => {
     {
       id: 4,
       img: <DirectionsCarTwoToneIcon />,
-      title: "Top Apps",
+      title: `${t("iconTexts.topApps")}`,
     },
     {
       id: 5,
