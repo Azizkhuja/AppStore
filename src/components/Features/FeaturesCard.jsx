@@ -40,7 +40,7 @@ const FeaturesCard = () => {
     {
       id: 6,
       img: <ShoppingBagTwoToneIcon />,
-      title: "Platinum",
+      title: `${t("iconTexts.platinum")}`,
     },
   ];
   return (
