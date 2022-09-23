@@ -8,9 +8,7 @@ function Features() {
   return (
     <div>
       <StyledHeadline variant="h2">{t("heroTitle")}</StyledHeadline>
-      <StyledSubHeadline variant="h3">
-        Find better deals across 100+ categories
-      </StyledSubHeadline>
+      <StyledSubHeadline variant="h3">{t("heroSubTitle")}</StyledSubHeadline>
       <FeaturesCard />
     </div>
   );
