@@ -25,7 +25,7 @@ const FeaturesCard = () => {
     {
       id: 3,
       img: <HomeWorkTwoToneIcon />,
-      title: "Tranding",
+      title: `${t("iconTexts.tranding")}`,
     },
     {
       id: 4,
