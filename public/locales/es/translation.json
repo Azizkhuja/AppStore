@@ -7,5 +7,8 @@
   },
   "headlineBtn": "Obtenga un informe de crédito gratis",
   "heroTitle": "Empieza a ahorrar dinero",
-  "heroSubTitle": "Encuentra mejores ofertas en más de 100 categorías"
+  "heroSubTitle": "Encuentra mejores ofertas en más de 100 categorías",
+  "iconTexts": {
+    "topPaid": "Mejor pagados"
+  }
 }

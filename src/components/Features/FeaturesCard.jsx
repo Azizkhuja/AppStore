@@ -4,16 +4,18 @@ import HomeWorkTwoToneIcon from "@mui/icons-material/HomeWorkTwoTone";
 import DirectionsCarTwoToneIcon from "@mui/icons-material/DirectionsCarTwoTone";
 import TrendingUpTwoToneIcon from "@mui/icons-material/TrendingUpTwoTone";
 import ShoppingBagTwoToneIcon from "@mui/icons-material/ShoppingBagTwoTone";
+import { useTranslation } from "react-i18next";
 
 import Grid from "@mui/material/Unstable_Grid2";
 import { Card, CardContent, Typography, Skeleton } from "@mui/material";
 
 const FeaturesCard = () => {
+  const { t } = useTranslation();
   const cardInfo = [
     {
       id: 1,
       img: <CreditCardTwoToneIcon />,
-      title: "Top Paid",
+      title: `${t("iconTexts.topPaid")}`,
     },
     {
       id: 2,
