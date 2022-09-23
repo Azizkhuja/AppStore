@@ -20,7 +20,7 @@ const FeaturesCard = () => {
     {
       id: 2,
       img: <HourglassTopTwoToneIcon />,
-      title: "Top Free",
+      title: `${t("iconTexts.topFree")}`,
     },
     {
       id: 3,

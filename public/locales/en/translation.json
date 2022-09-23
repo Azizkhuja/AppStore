@@ -9,6 +9,7 @@
   "heroTitle": "Start saving money",
   "heroSubTitle": "Find better deals across 100+ categories",
   "iconTexts": {
-    "topPaid": "Top Paid"
+    "topPaid": "Top Paid",
+    "topFree": "Top Free"
   }
 }
