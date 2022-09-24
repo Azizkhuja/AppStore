@@ -23,6 +23,11 @@ const LangSelector = () => {
   );
 };
 
-const SelectStyle = styled.select``;
+const SelectStyle = styled.select`
+  cursor: pointer;
+  padding: 8px;
+  outline: none;
+  border: none;
+`;
 
 export default LangSelector;
