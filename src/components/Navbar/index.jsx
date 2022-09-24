@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { styled, alpha } from "@mui/material/styles";
+import i18next from "i18next";
 import {
   AppBar,
   Box,
@@ -55,6 +57,10 @@ function Navbar() {
               style={{ color: "#000" }}
             />
           </Search>
+          <select>
+            <option value="us">🇺🇸 US</option>
+            <option value="es">🇪🇸 ES</option>
+          </select>
         </Toolbar>
       </AppBar>
     </Box>
