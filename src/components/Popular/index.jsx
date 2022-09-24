@@ -2,9 +2,11 @@ import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import PopularTable from "./PopularTable";
+import { useTranslation } from "react-i18next";
 
 const Popular = () => {
   const matches = useMediaQuery("(min-width:900px)");
+  const { t } = useTranslation();
   return (
     <Grid container mt={6}>
       <Grid item p={matches ? 0 : 2} sx={{ textAlign: "center" }}>
@@ -13,7 +15,7 @@ const Popular = () => {
           mb={3}
           sx={{ fontWeight: matches ? 500 : null }}
         >
-          The most popular apps of the decade
+          {t("popularTitle")}
         </Typography>
         <Typography variant="body1" mb={2} sx={{ color: "#a9aaaa" }}>
           Unsurprisingly, it seems that the apps that have ruled the Internet in
