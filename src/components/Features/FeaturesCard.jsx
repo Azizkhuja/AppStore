@@ -61,6 +61,7 @@ const FeaturesCard = () => {
                 border: "1px solid #e3e5e8",
                 paddingLeft: 2,
                 paddingRight: 2,
+                minWidth: 180,
               }}
             >
               <CardContent
