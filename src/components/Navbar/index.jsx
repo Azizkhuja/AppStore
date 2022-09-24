@@ -17,6 +17,12 @@ import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 function Navbar() {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    if (localStorage.getItem("i18nextLng")?.length > 2) {
+      i18next.changeLanguage("en");
+    }
+  }, []);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -57,7 +63,7 @@ function Navbar() {
               style={{ color: "#000" }}
             />
           </Search>
-          <select>
+          <select value={localStorage.getItem("i18nextLng")}>
             <option value="us">🇺🇸 US</option>
             <option value="es">🇪🇸 ES</option>
           </select>
