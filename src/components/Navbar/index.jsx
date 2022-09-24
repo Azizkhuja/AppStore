@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { styled, alpha } from "@mui/material/styles";
-import i18next from "i18next";
 import {
   AppBar,
   Box,
@@ -13,19 +11,10 @@ import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
+import LangSelector from "./LangSelector";
 
 function Navbar() {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    if (localStorage.getItem("i18nextLng")?.length > 2) {
-      i18next.changeLanguage("en");
-    }
-  }, []);
-
-  const handleLanguageChange = (e) => {
-    i18next.changeLanguage(e.target.value);
-  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -67,13 +56,7 @@ function Navbar() {
               style={{ color: "#000" }}
             />
           </Search>
-          <select
-            value={localStorage.getItem("i18nextLng")}
-            onChange={handleLanguageChange}
-          >
-            <option value="us">🇺🇸 US</option>
-            <option value="es">🇪🇸 ES</option>
-          </select>
+          <LangSelector />
         </Toolbar>
       </AppBar>
     </Box>
