@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import i18next from "i18next";
+import styled from "styled-components";
 
 const LangSelector = () => {
   useEffect(() => {
@@ -12,14 +13,16 @@ const LangSelector = () => {
     i18next.changeLanguage(e.target.value);
   };
   return (
-    <select
+    <SelectStyle
       value={localStorage.getItem("i18nextLng")}
       onChange={handleLanguageChange}
     >
       <option value="us">🇺🇸 US</option>
       <option value="es">🇪🇸 ES</option>
-    </select>
+    </SelectStyle>
   );
 };
+
+const SelectStyle = styled.select``;
 
 export default LangSelector;
