@@ -26,7 +26,7 @@ const Popular = () => {
       </Grid>
       <Grid item xs={12} lg={6} p={2}>
         <Typography variant="h5" mb={1} sx={{ textAlign: "center" }}>
-          Top apps on Android platform
+          {t("popularSection.popularAndroid")}
         </Typography>
         <PopularTable />
       </Grid>
