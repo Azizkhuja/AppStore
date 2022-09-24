@@ -15,15 +15,14 @@ const Popular = () => {
           mb={3}
           sx={{ fontWeight: matches ? 500 : null }}
         >
-          {t("popularTitle")}
+          {t("popularSection.popularTitle")}
         </Typography>
-        <Typography variant="body1" mb={2} sx={{ color: "#a9aaaa" }}>
-          Unsurprisingly, it seems that the apps that have ruled the Internet in
-          the last decade have been social media apps, with Facebook emerging as
-          the clear winner. Facebook does not only occupy the top two places on
-          the podium, but the companies that it has acquired, WhatsApp and
-          Instagram
-        </Typography>
+        {t("popularSection.popularDesc")}
+        <Typography
+          variant="body1"
+          mb={2}
+          sx={{ color: "#a9aaaa" }}
+        ></Typography>
       </Grid>
       <Grid item xs={12} lg={6} p={2}>
         <Typography variant="h5" mb={1} sx={{ textAlign: "center" }}>

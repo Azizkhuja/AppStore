@@ -16,5 +16,8 @@
     "topChart": "Tabla superior",
     "platinum": "Platino"
   },
-  "popularTitle": "Las aplicaciones más populares de la década"
+  "popularSection": {
+    "popularTitle": "Las aplicaciones más populares de la década",
+    "popularDesc": "Como era de esperar, parece que las aplicaciones que han dominado Internet en la última década han sido las aplicaciones de redes sociales, con Facebook emergiendo como el claro ganador. Facebook no sólo ocupa los dos primeros puestos del podio, sino las empresas que ha adquirido, WhatsApp e Instagram"
+  }
 }
