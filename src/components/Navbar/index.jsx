@@ -7,11 +7,14 @@ import {
   Typography,
   InputBase,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 
 function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -47,7 +50,7 @@ function Navbar() {
             </SearchIconWrapper>
             <StyledInputBase
               data-testid="search-input"
-              placeholder="Search…"
+              placeholder={t("appBar")}
               inputProps={{ "aria-label": "search" }}
               style={{ color: "#000" }}
             />
