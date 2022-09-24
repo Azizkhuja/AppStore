@@ -24,5 +24,8 @@
   },
   "news": {
     "title": "Latest guides, comparisons and news about apps"
+  },
+  "footer": {
+    "copyRight": "AppStore. All rights reserved"
   }
 }

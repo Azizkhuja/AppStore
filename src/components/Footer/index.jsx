@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTranslation } from "react-i18next";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 // Social icons
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -12,6 +13,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Footer = () => {
   const matches = useMediaQuery("(min-width:600px)");
   const fullYear = new Date().getFullYear();
+  const { t } = useTranslation();
+
   return (
     <FooterContainer>
       <Container>
@@ -50,7 +53,7 @@ const Footer = () => {
               sx={{ fontSize: matches ? "1rem" : "0.7rem" }}
               data-testid="footer-year"
             >
-              &copy; {fullYear} AppStore. All rights reserved
+              &copy; {fullYear} {t("footer.copyRight")}
             </Typography>
           </Grid>
         </Grid>

@@ -24,5 +24,8 @@
   },
   "news": {
     "title": "Últimas guías, comparativas y novedades sobre apps"
+  },
+  "footer": {
+    "copyRight": "AppStore. Reservados todos los derechos"
   }
 }
