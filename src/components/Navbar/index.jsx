@@ -23,6 +23,10 @@ function Navbar() {
     }
   }, []);
 
+  const handleLanguageChange = (e) => {
+    i18next.changeLanguage(e.target.value);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -63,7 +67,10 @@ function Navbar() {
               style={{ color: "#000" }}
             />
           </Search>
-          <select value={localStorage.getItem("i18nextLng")}>
+          <select
+            value={localStorage.getItem("i18nextLng")}
+            onChange={handleLanguageChange}
+          >
             <option value="us">🇺🇸 US</option>
             <option value="es">🇪🇸 ES</option>
           </select>
