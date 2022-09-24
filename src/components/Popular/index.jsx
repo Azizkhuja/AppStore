@@ -32,7 +32,7 @@ const Popular = () => {
       </Grid>
       <Grid item xs={12} lg={6} p={2} sx={{ textAlign: "center" }}>
         <Typography variant="h5" mb={1}>
-          Top apps on iOS platform
+          {t("popularSection.populariOS")}
         </Typography>
         <PopularTable />
       </Grid>

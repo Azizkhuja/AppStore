@@ -19,6 +19,7 @@
   "popularSection": {
     "popularTitle": "The most popular apps of the decade",
     "popularDesc": "Unsurprisingly, it seems that the apps that have ruled the Internet in the last decade have been social media apps, with Facebook emerging as the clear winner. Facebook does not only occupy the top two places on the podium, but the companies that it has acquired, WhatsApp and Instagram",
-    "popularAndroid": "Top apps on Android platform"
+    "popularAndroid": "Top apps on Android platform",
+    "populariOS": "Top apps on iOS platform"
   }
 }
