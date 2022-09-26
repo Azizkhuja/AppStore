@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import {
   AppBar,
@@ -12,6 +13,18 @@ import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 import LangSelector from "./LangSelector";
 
 function Navbar() {
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("items")) || null
+  );
+
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: process.env.REACT_APP_GOOGLE_AUTH,
+      callback: handleCallbackResponse,
+    });
+    localStorage.setItem("items", JSON.stringify(user));
+  }, [user]);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
