@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 import LangSelector from "./LangSelector";
 
@@ -45,17 +44,6 @@ function Navbar() {
           >
             App Store
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon style={{ color: "#000" }} />
-            </SearchIconWrapper>
-            <StyledInputBase
-              data-testid="search-input"
-              placeholder={t("appBar")}
-              inputProps={{ "aria-label": "search" }}
-              style={{ color: "#000" }}
-            />
-          </Search>
           <LangSelector />
         </Toolbar>
       </AppBar>
