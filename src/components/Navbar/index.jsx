@@ -7,14 +7,11 @@ import {
   Typography,
   InputBase,
 } from "@mui/material";
-import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 import LangSelector from "./LangSelector";
 
 function Navbar() {
-  const { t } = useTranslation();
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
