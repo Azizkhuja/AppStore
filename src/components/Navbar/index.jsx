@@ -17,6 +17,12 @@ function Navbar() {
     JSON.parse(localStorage.getItem("items")) || null
   );
 
+  function handleCallbackResponse(response) {
+    let userObj = jwtDecode(response.credential);
+    setUser(userObj);
+    document.getElementById("signInDiv").hidden = true;
+  }
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
