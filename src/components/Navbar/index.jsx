@@ -11,6 +11,9 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 import LangSelector from "./LangSelector";
+import jwtDecode from "jwt-decode";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
 
 function Navbar() {
   const [user, setUser] = useState(
