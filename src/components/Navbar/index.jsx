@@ -23,6 +23,11 @@ function Navbar() {
     document.getElementById("signInDiv").hidden = true;
   }
 
+  function handleSignOut(e) {
+    setUser({});
+    document.getElementById("signInDiv").hidden = false;
+  }
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
