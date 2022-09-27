@@ -14,8 +14,11 @@ import LangSelector from "./LangSelector";
 import jwtDecode from "jwt-decode";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t } = useTranslation();
+
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("items")) || null
   );
@@ -40,7 +43,6 @@ function Navbar() {
     localStorage.setItem("items", JSON.stringify(user));
   }, [user]);
 
-  /* global google */
   google.accounts.id.renderButton(document.getElementById("signInDiv"), {
     theme: "outline",
     size: "large",
