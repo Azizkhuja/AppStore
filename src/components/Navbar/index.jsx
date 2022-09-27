@@ -73,6 +73,14 @@ function Navbar() {
           </Typography>
           <LangSelector />
           {user?.picture ? null : <div id="signInDiv"></div>}
+          {user?.picture && (
+            <>
+              <Avatar
+                sx={{ marginRight: "4px", marginLeft: "4px" }}
+                src={user?.picture}
+              />
+              
+          )}
         </Toolbar>
       </AppBar>
     </Box>
