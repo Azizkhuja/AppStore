@@ -79,7 +79,16 @@ function Navbar() {
                 sx={{ marginRight: "4px", marginLeft: "4px" }}
                 src={user?.picture}
               />
-              
+              <Button
+                sx={{
+                  backgroundColor: "#000",
+                }}
+                onClick={handleSignOut}
+                variant="contained"
+              >
+                Sign Out
+              </Button>
+            </>
           )}
         </Toolbar>
       </AppBar>
