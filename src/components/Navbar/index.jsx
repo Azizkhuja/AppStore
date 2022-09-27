@@ -72,6 +72,7 @@ function Navbar() {
             App Store
           </Typography>
           <LangSelector />
+          {user?.picture ? null : <div id="signInDiv"></div>}
         </Toolbar>
       </AppBar>
     </Box>
