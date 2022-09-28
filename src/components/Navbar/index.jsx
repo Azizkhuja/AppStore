@@ -1,13 +1,5 @@
 import { useEffect, useState } from "react";
-import { styled, alpha } from "@mui/material/styles";
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  InputBase,
-} from "@mui/material";
+import { AppBar, Box, Toolbar, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 import LangSelector from "./LangSelector";
