@@ -86,6 +86,10 @@ function Navbar() {
               <Button
                 sx={{
                   backgroundColor: "#000",
+                  ":hover": {
+                    backgroundColor: "#fff",
+                    color: "#000",
+                  },
                 }}
                 onClick={handleSignOut}
                 variant="contained"
