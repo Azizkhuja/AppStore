@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
-import { AppBar, Box, Toolbar, IconButton, Typography } from "@mui/material";
+import jwtDecode from "jwt-decode";
+import { useTranslation } from "react-i18next";
+import LangSelector from "./LangSelector";
+
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Avatar,
+  Button,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
-import LangSelector from "./LangSelector";
-import jwtDecode from "jwt-decode";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const { t } = useTranslation();
