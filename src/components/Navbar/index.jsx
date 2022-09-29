@@ -53,15 +53,6 @@ function Navbar() {
         style={{ background: "#fff", boxShadow: "none" }}
       >
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="primary"
-            aria-label="open drawer"
-            sx={{ mr: 2, color: "#000" }}
-          >
-            <MenuIcon data-testid="MenuIcon" />
-          </IconButton>
           <ArchitectureTwoToneIcon sx={{ color: "#000", fontSize: 40 }} />
           <Typography
             variant="h6"
