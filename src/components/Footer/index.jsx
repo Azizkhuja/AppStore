@@ -5,10 +5,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "react-i18next";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 // Social icons
-import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
   const matches = useMediaQuery("(min-width:600px)");
@@ -40,7 +40,7 @@ const Footer = () => {
                 <BusinessCenterIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
-                <TwitterIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <GitHubIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
                 <InstagramIcon style={{ fontSize: matches ? 38 : 30 }} />
