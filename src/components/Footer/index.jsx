@@ -5,7 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "react-i18next";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 // Social icons
-import InstagramIcon from "@mui/icons-material/Instagram";
+import LanguageIcon from "@mui/icons-material/Language";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -43,7 +43,7 @@ const Footer = () => {
                 <GitHubIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
-                <InstagramIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <LanguageIcon style={{ fontSize: matches ? 38 : 30 }} />
               </OrderList>
               <OrderList>
                 <LinkedInIcon style={{ fontSize: matches ? 38 : 30 }} />
