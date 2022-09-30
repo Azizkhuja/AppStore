@@ -4,6 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "react-i18next";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
+import Tooltip from "@mui/material/Tooltip";
 // Social icons
 import LanguageIcon from "@mui/icons-material/Language";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -37,16 +38,24 @@ const Footer = () => {
             </OrderLists>
             <OrderLists data-testid="footer-list-container">
               <OrderList>
-                <BusinessCenterIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <Tooltip title="Portfolio" placement="left">
+                  <BusinessCenterIcon style={{ fontSize: matches ? 38 : 30 }} />
+                </Tooltip>
               </OrderList>
               <OrderList>
-                <GitHubIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <Tooltip title="GitHub" placement="top">
+                  <GitHubIcon style={{ fontSize: matches ? 38 : 30 }} />
+                </Tooltip>
               </OrderList>
               <OrderList>
-                <LanguageIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <Tooltip title="My Website" placement="top">
+                  <LanguageIcon style={{ fontSize: matches ? 38 : 30 }} />
+                </Tooltip>
               </OrderList>
               <OrderList>
-                <LinkedInIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <Tooltip title="LinkedIn" placement="right">
+                  <LinkedInIcon style={{ fontSize: matches ? 38 : 30 }} />
+                </Tooltip>
               </OrderList>
             </OrderLists>
             <Typography
