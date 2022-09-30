@@ -28,7 +28,7 @@ const Footer = () => {
               style={{ flexDirection: matches ? "row" : "column" }}
               data-testid="footer-list"
             >
-              <OrderList>Home</OrderList>
+              <OrderList>{t("footer.home")}</OrderList>
               <OrderList>About us</OrderList>
               <OrderList>Our crew</OrderList>
               <OrderList>Careers</OrderList>
