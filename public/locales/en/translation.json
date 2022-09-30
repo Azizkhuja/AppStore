@@ -28,6 +28,8 @@
   },
   "footer": {
     "copyRight": "AppStore. All rights reserved",
-    "home": "Home"
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourCrew": "Our Crew"
   }
 }

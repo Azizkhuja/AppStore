@@ -29,8 +29,8 @@ const Footer = () => {
               data-testid="footer-list"
             >
               <OrderList>{t("footer.home")}</OrderList>
-              <OrderList>About us</OrderList>
-              <OrderList>Our crew</OrderList>
+              <OrderList>{t("footer.aboutUs")}</OrderList>
+              <OrderList>{t("footer.ourCrew")}</OrderList>
               <OrderList>Careers</OrderList>
               <OrderList>Media room</OrderList>
               <OrderList>Partner with us</OrderList>
