@@ -33,7 +33,7 @@ const Footer = () => {
               <OrderList>{t("footer.ourCrew")}</OrderList>
               <OrderList>{t("footer.careers")}</OrderList>
               <OrderList>{t("footer.mediaRoom")}</OrderList>
-              <OrderList>Partner with us</OrderList>
+              <OrderList>{t("footer.partnerWithUs")}</OrderList>
             </OrderLists>
             <OrderLists data-testid="footer-list-container">
               <OrderList>
