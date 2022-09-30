@@ -31,7 +31,7 @@ const Footer = () => {
               <OrderList>{t("footer.home")}</OrderList>
               <OrderList>{t("footer.aboutUs")}</OrderList>
               <OrderList>{t("footer.ourCrew")}</OrderList>
-              <OrderList>Careers</OrderList>
+              <OrderList>{t("footer.careers")}</OrderList>
               <OrderList>Media room</OrderList>
               <OrderList>Partner with us</OrderList>
             </OrderLists>
