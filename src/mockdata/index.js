@@ -369,7 +369,7 @@ export const androidTopApps = [
 // iOS
 export const iOSTopApp = [
   {
-    id: "835599320",
+    app_id: "835599320",
     appId: "com.zhiliaoapp.musically",
     app_name: "TikTok",
     app_category: "Social",
@@ -383,7 +383,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "971265422",
+    app_id: "971265422",
     appId: "com.hbo.hbonow",
     app_name: "HBO Max: Stream TV & Movies",
     app_category: "Entertainment",
@@ -397,7 +397,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "1446075923",
+    app_id: "1446075923",
     appId: "com.disney.disneyplus",
     app_name: "Disney+",
     app_category: "Entertainment",
@@ -411,7 +411,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "376510438",
+    app_id: "376510438",
     appId: "com.hulu.plus",
     app_name: "Hulu: Stream shows & movies",
     app_category: "Entertainment",
@@ -425,7 +425,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "530168168",
+    app_id: "530168168",
     appId: "com.cbsvideo.app",
     app_name: "Paramount+",
     app_category: "Entertainment",
@@ -439,7 +439,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "1508186374",
+    app_id: "1508186374",
     appId: "com.peacocktv.peacock",
     app_name: "Peacock TV: Stream TV & Movies",
     app_category: "Entertainment",
@@ -453,7 +453,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "363590051",
+    app_id: "363590051",
     appId: "com.netflix.Netflix",
     app_name: "Netflix",
     app_category: "Entertainment",
@@ -467,7 +467,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "329913454",
+    app_id: "329913454",
     appId: "com.crunchyroll.iphone",
     app_name: "Crunchyroll",
     app_category: "Entertainment",
@@ -481,7 +481,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "545519333",
+    app_id: "545519333",
     appId: "com.amazon.aiv.AIVApp",
     app_name: "Amazon Prime Video",
     app_category: "Entertainment",
@@ -495,7 +495,7 @@ export const iOSTopApp = [
     currency: "USD",
   },
   {
-    id: "550221096",
+    app_id: "550221096",
     appId: "com.starz.starzplay",
     app_name: "STARZ",
     app_category: "Entertainment",
