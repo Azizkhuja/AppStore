@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
 import { useTranslation } from "react-i18next";
@@ -44,7 +45,7 @@ function Navbar() {
 
   google.accounts.id.renderButton(document.getElementById("signInDiv"), {
     theme: "outline",
-    size: "large",
+    size: "medium",
   });
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -53,46 +54,54 @@ function Navbar() {
         style={{ background: "#fff", boxShadow: "none" }}
       >
         <Toolbar>
-          <ArchitectureTwoToneIcon sx={{ color: "#000", fontSize: 40 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{
-              flexGrow: 1,
-              color: "#000",
-              display: { xs: "none", sm: "block" },
-            }}
-          >
-            App Store
-          </Typography>
-          <LangSelector />
-          {user?.picture ? null : <div id="signInDiv"></div>}
-          {user?.picture && (
-            <>
-              <Avatar
-                sx={{ marginRight: "4px", marginLeft: "4px" }}
-                src={user?.picture}
-              />
-              <Button
-                sx={{
-                  backgroundColor: "#000",
-                  ":hover": {
-                    backgroundColor: "#fff",
-                    color: "#000",
-                  },
-                }}
-                onClick={handleSignOut}
-                variant="contained"
-              >
-                Sign Out
-              </Button>
-            </>
-          )}
+          <div>
+            <ArchitectureTwoToneIcon sx={{ color: "#000", fontSize: 40 }} />
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                flexGrow: 1,
+                color: "#000",
+                display: { xs: "none", sm: "block" },
+              }}
+            >
+              App Store
+            </Typography>
+          </div>
+          <div>
+            <LangSelector />
+            {user?.picture ? null : <div id="signInDiv"></div>}
+            {user?.picture && (
+              <>
+                <Avatar
+                  sx={{ marginRight: "4px", marginLeft: "4px" }}
+                  src={user?.picture}
+                />
+                <Button
+                  sx={{
+                    backgroundColor: "#000",
+                    ":hover": {
+                      backgroundColor: "#fff",
+                      color: "#000",
+                    },
+                  }}
+                  onClick={handleSignOut}
+                  variant="contained"
+                >
+                  Sign Out
+                </Button>
+              </>
+            )}
+          </div>
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
+
+const ItemFlex = styled.li`
+  display: flex;
+`;
 
 export default Navbar;
