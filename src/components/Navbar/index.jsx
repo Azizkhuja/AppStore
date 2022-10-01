@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import jwtDecode from "jwt-decode";
 import { useTranslation } from "react-i18next";
 import LangSelector from "./LangSelector";
@@ -16,6 +16,7 @@ import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 
 function Navbar() {
   const { t } = useTranslation();
+  const divRef = useRef(null);
 
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("items")) || null
@@ -23,28 +24,29 @@ function Navbar() {
 
   function handleCallbackResponse(response) {
     let userObj = jwtDecode(response.credential);
+
     setUser(userObj);
-    document.getElementById("signInDiv").hidden = true;
   }
 
   function handleSignOut(e) {
     setUser({});
-    document.getElementById("signInDiv").hidden = false;
   }
 
   useEffect(() => {
-    /* global google */
-    google.accounts.id.initialize({
-      client_id: process.env.REACT_APP_GOOGLE_AUTH,
-      callback: handleCallbackResponse,
-    });
-    localStorage.setItem("items", JSON.stringify(user));
-  }, [user]);
+    if (divRef.current) {
+      window.google.accounts.id.initialize({
+        client_id: process.env.REACT_APP_GOOGLE_AUTH,
+        callback: handleCallbackResponse,
+      });
 
-  google.accounts.id.renderButton(document.getElementById("signInDiv"), {
-    theme: "outline",
-    size: "medium",
-  });
+      window.google.accounts.id.renderButton(divRef.current, {
+        theme: "outline",
+        size: "medium",
+      });
+    }
+    localStorage.setItem("items", JSON.stringify(user));
+  }, [user, divRef.current]);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -69,7 +71,8 @@ function Navbar() {
           </ItemFlex>
           <ItemFlex>
             <LangSelector />
-            {user?.picture ? null : <div id="signInDiv"></div>}
+
+            {user?.picture ? null : <div ref={divRef} />}
             {user?.picture && (
               <>
                 <Avatar
