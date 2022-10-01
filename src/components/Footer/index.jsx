@@ -50,8 +50,14 @@ const Footer = () => {
                 </Tooltip>
               </OrderList>
               <OrderList>
-                <Tooltip title="GitHub" placement="top">
-                  <GitHubIcon style={{ fontSize: matches ? 38 : 30 }} />
+                <Tooltip title="GitHub" placement="bottom">
+                  <Link
+                    href="https://github.com/Azizkhuja"
+                    color="inherit"
+                    target="_blank"
+                  >
+                    <GitHubIcon style={{ fontSize: matches ? 38 : 30 }} />
+                  </Link>
                 </Tooltip>
               </OrderList>
               <OrderList>
