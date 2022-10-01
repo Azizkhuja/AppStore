@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { Container, Typography } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTranslation } from "react-i18next";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Container, Typography, Tooltip, Link } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
-import Tooltip from "@mui/material/Tooltip";
 // Social icons
 import LanguageIcon from "@mui/icons-material/Language";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -39,7 +38,15 @@ const Footer = () => {
             <OrderLists data-testid="footer-list-container">
               <OrderList>
                 <Tooltip title="Portfolio" placement="left">
-                  <BusinessCenterIcon style={{ fontSize: matches ? 38 : 30 }} />
+                  <Link
+                    href="https://azeezkhujaev.netlify.app/"
+                    color="inherit"
+                    target="_blank"
+                  >
+                    <BusinessCenterIcon
+                      style={{ fontSize: matches ? 38 : 30 }}
+                    />
+                  </Link>
                 </Tooltip>
               </OrderList>
               <OrderList>
