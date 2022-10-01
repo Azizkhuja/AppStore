@@ -53,8 +53,8 @@ function Navbar() {
         position="static"
         style={{ background: "#fff", boxShadow: "none" }}
       >
-        <Toolbar>
-          <div>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <ItemFlex>
             <ArchitectureTwoToneIcon sx={{ color: "#000", fontSize: 40 }} />
             <Typography
               variant="h6"
@@ -68,8 +68,8 @@ function Navbar() {
             >
               App Store
             </Typography>
-          </div>
-          <div>
+          </ItemFlex>
+          <ItemFlex>
             <LangSelector />
             {user?.picture ? null : <div id="signInDiv"></div>}
             {user?.picture && (
@@ -93,7 +93,7 @@ function Navbar() {
                 </Button>
               </>
             )}
-          </div>
+          </ItemFlex>
         </Toolbar>
       </AppBar>
     </Box>
