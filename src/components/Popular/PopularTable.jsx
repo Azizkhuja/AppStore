@@ -112,16 +112,22 @@ const dataAll = [
   },
 ];
 
-const PopularTable = () => {
+const PopularTable = ({
+  rating,
+  app_icon,
+  app_name,
+  app_category,
+  num_downloads,
+}) => {
   const matches = useMediaQuery("(min-width:500px)");
   useEffect(() => {
     // const options = {
     //   method: "GET",
-    //   url: "https://google-play6.p.rapidapi.com/top-grossing-apps",
-    //   params: { region: "us", language: "en" },
+    //   url: "https://app-store2.p.rapidapi.com/ios/top/grossing",
+    //   params: { country: "us", lang: "en", category: "6016" },
     //   headers: {
     //     "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
-    //     "X-RapidAPI-Host": "google-play6.p.rapidapi.com",
+    //     "X-RapidAPI-Host": "app-store2.p.rapidapi.com",
     //   },
     // };
     // axios
@@ -150,35 +156,31 @@ const PopularTable = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {dataAll.map((row) => (
-            <StyledTableRow key={row.app_id}>
-              <StyledTableCell
-                align="center"
-                sx={{ display: matches ? "table-cell" : "none" }}
-              >
-                <Typography variant="body1">
-                  <StarTwoToneIcon />
-                </Typography>
-                <Typography variant="subtitle1">{row.rating}</Typography>
-              </StyledTableCell>
-              <StyledTableCell>
-                <img
-                  src={row.app_icon}
-                  style={{
-                    width: matches ? 50 : 30,
-                    height: matches ? 50 : 30,
-                  }}
-                />
-              </StyledTableCell>
-              <StyledTableCell>{row.app_name}</StyledTableCell>
-              <StyledTableCell
-                sx={{ display: matches ? "table-cell" : "none" }}
-              >
-                {row.app_category}
-              </StyledTableCell>
-              <StyledTableCell>{row.num_downloads}</StyledTableCell>
-            </StyledTableRow>
-          ))}
+          <StyledTableRow>
+            <StyledTableCell
+              align="center"
+              sx={{ display: matches ? "table-cell" : "none" }}
+            >
+              <Typography variant="body1">
+                <StarTwoToneIcon />
+              </Typography>
+              <Typography variant="subtitle1">{rating}</Typography>
+            </StyledTableCell>
+            <StyledTableCell>
+              <img
+                src={app_icon}
+                style={{
+                  width: matches ? 50 : 30,
+                  height: matches ? 50 : 30,
+                }}
+              />
+            </StyledTableCell>
+            <StyledTableCell>{app_name}</StyledTableCell>
+            <StyledTableCell sx={{ display: matches ? "table-cell" : "none" }}>
+              {app_category}
+            </StyledTableCell>
+            <StyledTableCell>{num_downloads}</StyledTableCell>
+          </StyledTableRow>
         </TableBody>
       </Table>
     </TableContainer>
