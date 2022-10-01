@@ -23,25 +23,7 @@ const PopularTable = ({
   num_downloads,
 }) => {
   const matches = useMediaQuery("(min-width:500px)");
-  useEffect(() => {
-    // const options = {
-    //   method: "GET",
-    //   url: "https://app-store2.p.rapidapi.com/ios/top/grossing",
-    //   params: { country: "us", lang: "en", category: "6016" },
-    //   headers: {
-    //     "X-RapidAPI-Key": "7fc51b42eamshead613badf68db5p1d54a0jsnac2797b92d68",
-    //     "X-RapidAPI-Host": "app-store2.p.rapidapi.com",
-    //   },
-    // };
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     console.log(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
-  }, []);
+
   return (
     <TableContainer component={Paper} data-testid="table-container">
       <Table aria-label="customized table">
