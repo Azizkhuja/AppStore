@@ -8,12 +8,10 @@ import {
   AppBar,
   Box,
   Toolbar,
-  IconButton,
   Typography,
   Avatar,
   Button,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import ArchitectureTwoToneIcon from "@mui/icons-material/ArchitectureTwoTone";
 
 function Navbar() {
@@ -100,7 +98,7 @@ function Navbar() {
   );
 }
 
-const ItemFlex = styled.li`
+const ItemFlex = styled.div`
   display: flex;
 `;
 
