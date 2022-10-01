@@ -62,7 +62,13 @@ const Footer = () => {
               </OrderList>
               <OrderList>
                 <Tooltip title="My Website" placement="top">
-                  <LanguageIcon style={{ fontSize: matches ? 38 : 30 }} />
+                  <Link
+                    href="https://twitter.com/aziz_ipro"
+                    color="inherit"
+                    target="_blank"
+                  >
+                    <LanguageIcon style={{ fontSize: matches ? 38 : 30 }} />
+                  </Link>
                 </Tooltip>
               </OrderList>
               <OrderList>
