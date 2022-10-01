@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { styled } from "@mui/material/styles";
-import axios from "axios";
 import {
   Table,
   TableBody,
