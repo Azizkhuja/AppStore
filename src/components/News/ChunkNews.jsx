@@ -1,5 +1,4 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Link } from "react-router-dom";
 
 import {
   Box,
