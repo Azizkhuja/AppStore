@@ -1,5 +1,5 @@
 ## App Store 
-[Link to DEMO!](https://app-store-info.netlify.app)
+[Link to DEMO](https://app-store-info.netlify.app)
 
 ![Screenshot](AppStore.png)
 
